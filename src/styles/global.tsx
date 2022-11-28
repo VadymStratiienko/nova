@@ -26,10 +26,7 @@ body{
   margin: 0;
   padding: 0;
   //height:200vh;
- 
-  
-
-  
+  color: var(--color-default);
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-family: var(--font-default);
   color: var(--color-default);
