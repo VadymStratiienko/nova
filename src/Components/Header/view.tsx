@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
+import { RootState } from "../../redux/store";
+import { setOpen } from "../../redux/burgerMenuSlice";
 
 const Head = styled.header<{ isScrolled: boolean }>`
   background: ${({ isScrolled }) => isScrolled && "rgba(27, 47, 69, 0.9)"};
@@ -31,7 +34,6 @@ const Navbar = styled.nav`
   max-width: 680px;
   transition: 0.3s;
 
-
   ul {
     margin: 0;
     padding: 0;
@@ -40,6 +42,9 @@ const Navbar = styled.nav`
     list-style: none;
     align-items: center;
   }
+  /* @media (max-width: 1366px) {
+    display: none;
+  } */
 `;
 const List = styled.li`
   display: flex;
@@ -55,10 +60,40 @@ const List = styled.li`
   cursor: pointer;
 `;
 
+const StyledBurger = styled.div<{ open: boolean }>`
+  width: 32px;
+  height: 32px;
+ // display: none;
+ // @media (max-width: 1366px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  //}
+  div {
+    width: 32px;
+    height: 4px;
+    background-color: ${({ open }) => (open ? "#ccc" : "#ffffff")};
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+    &:nth-child(1) {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    }
+    &:nth-child(2) {
+      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? 0 : 1)};
+    }
+    &:nth-child(3) {
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
+  }
+`;
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-
+  const { open } = useSelector((state: RootState) => state.burger);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,6 +110,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <Head isScrolled={isScrolled}>
       <Container data-aos="fade-up">
@@ -90,6 +126,17 @@ const Header = () => {
             <List>Dropdown</List>
             <List>Contact</List>
           </ul>
+<div  onClick={() => dispatch(setOpen(open))}>
+          <StyledBurger
+           
+            open={open}
+            style={{ marginLeft: "20px" }}
+          >
+            <div />
+            <div />
+            <div />
+          </StyledBurger>
+          </div>
         </Navbar>
       </Container>
     </Head>
