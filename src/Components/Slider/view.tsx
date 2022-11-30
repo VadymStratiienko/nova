@@ -16,7 +16,7 @@ const H3 = styled.h3`
 const H4 = styled.h4`
   font-size: 20px;
   font-weight: 400;
-  color: #29486a;
+  color: var(--color-primar);
   font-family: var(--font-secondary);
   text-align: left;
   margin-bottom: 16px;

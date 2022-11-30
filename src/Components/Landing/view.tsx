@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import BgImg from "../../assets/img/why-us-bg.jpg";
+import BlogPost from "../BlogPost/view";
+import CallToAction from "../CallToAction/view";
+import Features from "../Features/view";
 import Slider from "../Slider/view";
+import Table from "../Table/view";
 
 const Container = styled.section`
   position: relative;
@@ -11,8 +15,8 @@ const Container = styled.section`
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  /* padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5); */
   margin-right: auto;
   margin-left: auto;
 `;
@@ -61,9 +65,13 @@ const BgImgDiv = styled.div`
   width: 33%;
 `;
 
+const Section = styled.section`
+  padding-top: 80px;
+`
+
+
 const Landing = () => {
   return (
-    <>
     <Container>
       <Wrapper>
         <SectionDiv>
@@ -76,13 +84,18 @@ const Landing = () => {
           </div>
         </BlockSlider>
         </Wrapper>
-        </Container>
+        <Section>
+        <Wrapper>
         <SectionDiv>
-          <Container>
           <SectionHeader>Our Services</SectionHeader>
-          </Container>
         </SectionDiv>
-        </>
+        <Table />
+        </Wrapper>
+        </Section>
+      <CallToAction />
+      <Features />
+      <BlogPost />
+        </Container>
     
   );
 };

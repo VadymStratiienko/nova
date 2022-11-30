@@ -1,24 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import Banner from "./Components/Banner/view";
+import ScrollToTop from "react-scroll-to-top";
+import Footer from "./Components/Footer/view";
 import Header from "./Components/Header/view";
-import Landing from "./Components/Landing/view";
-import { GlobalStyle } from "./styles/global";
-
-const Wrapper = styled.main`
-  position: relative;
-  height: 200vh;
-`;
+import Home from "./page/Home/view";
 
 function App() {
   return (
     <>
-      <GlobalStyle />
       <Header />
-      <Wrapper>
-        <Banner />
-        <Landing />
-      </Wrapper>
+      <Home />
+      <Footer />
+      <ScrollToTop smooth className="scroll-to-top" color="white" />
     </>
   );
 }

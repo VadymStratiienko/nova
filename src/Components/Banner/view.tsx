@@ -34,7 +34,7 @@ const Row = styled.div`
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-1.5 * var(--bs-gutter-x));
-  margin-left: calc(3.5 * var(--bs-gutter-x));
+  margin-left: calc(12 * var(--bs-gutter-x));
 
   > * {
     flex-shrink: 0;

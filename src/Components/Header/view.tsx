@@ -15,19 +15,22 @@ const Container = styled.div`
   justify-content: space-between;
   margin-left: 200px;
   margin-right: 166px;
-  padding-right: 35px;
+  padding-right: 130px;
 `;
 const Logo = styled.h1`
   display: flex;
   align-items: center;
   color: #fff;
   cursor: pointer;
+  padding-left: 12px;
+  margin-left: 90px;
 `;
 const Navbar = styled.nav`
   padding: 0;
   width: 100%;
-  max-width: 650px;
+  max-width: 680px;
   transition: 0.3s;
+
 
   ul {
     margin: 0;
