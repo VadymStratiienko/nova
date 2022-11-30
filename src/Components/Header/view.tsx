@@ -58,6 +58,8 @@ const List = styled.li`
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
+
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -75,7 +77,7 @@ const Header = () => {
   }, []);
   return (
     <Head isScrolled={isScrolled}>
-      <Container>
+      <Container data-aos="fade-up">
         <Logo>Nova</Logo>
         <Navbar>
           <ul>

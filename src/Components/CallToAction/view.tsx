@@ -60,14 +60,14 @@ const CallToAction = () => {
    
     <Container>
        <Parallax speed={-10}>
-      <Block>
+      <Block  data-aos="fade-up"   data-aos-duration="1000">
         <h3>Ut fugiat aliquam aut non</h3>
         <p>
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident.
         </p>
-        <a href="#">Call To Action</a>
+        <a href="/">Call To Action</a>
       </Block>
       </Parallax>
     </Container>

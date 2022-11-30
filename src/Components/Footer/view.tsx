@@ -8,6 +8,7 @@ import {
 import styled from "styled-components";
 
 const ContainerFooter = styled.footer`
+z-index: 99;
   font-size: 14px;
 `;
 const FooterContent = styled.div`

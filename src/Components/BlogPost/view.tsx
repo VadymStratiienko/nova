@@ -124,12 +124,12 @@ const Text = styled.p`
 
 function BlogPost() {
   return (
-    <Container>
+    <Container  data-aos="fade-up"   data-aos-duration="1000">
       <SectionHeader>
         <h2>Recent Blog Posts</h2>
       </SectionHeader>
       <Posts>
-        <Post>
+        <Post  data-aos="fade-up"   data-aos-duration="1000">
           <PostBox>
             <PostImg>
               <img src={Blog1} alt="" />
@@ -153,7 +153,7 @@ function BlogPost() {
           </PostBox>
         </Post>
 
-        <Post>
+        <Post  data-aos="fade-up"   data-aos-duration="1000">
           <PostBox>
             <PostImg>
               <img src={Blog2} alt="" />
@@ -176,7 +176,7 @@ function BlogPost() {
           </PostBox>
         </Post>
 
-        <Post>
+        <Post  data-aos="fade-up"   data-aos-duration="1000">
           <PostBox>
             <PostImg>
               <img src={Blog3} alt="" />
@@ -199,7 +199,7 @@ function BlogPost() {
           </PostBox>
         </Post>
 
-        <Post>
+        <Post  data-aos="fade-up"   data-aos-duration="1000">
           <PostBox>
             <PostImg>
               <img src={Blog4} alt="" />

@@ -102,7 +102,7 @@ const Text = styled.p`
 
 const Table = () => {
   return (
-    <TableGrid>
+    <TableGrid  data-aos="fade-up"   data-aos-duration="1000">
       <Block>
         <BlockIcon>
           <Briefcase />

@@ -75,9 +75,9 @@ const Landing = () => {
     <Container>
       <Wrapper>
         <SectionDiv>
-          <SectionHeader>Why Choose Us</SectionHeader>
+          <SectionHeader data-aos="fade-up"   data-aos-duration="1000">Why Choose Us</SectionHeader>
         </SectionDiv>
-        <BlockSlider>
+        <BlockSlider data-aos="fade-up"   data-aos-duration="1000">
           <BgImgDiv />
           <div>
             <Slider />
@@ -86,10 +86,10 @@ const Landing = () => {
         </Wrapper>
         <Section>
         <Wrapper>
-        <SectionDiv>
+        <SectionDiv data-aos="fade-up"   data-aos-duration="1000">
           <SectionHeader>Our Services</SectionHeader>
         </SectionDiv>
-        <Table />
+        <Table/>
         </Wrapper>
         </Section>
       <CallToAction />
