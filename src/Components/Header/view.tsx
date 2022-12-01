@@ -6,7 +6,8 @@ import { setOpen } from "../../redux/burgerMenuSlice";
 
 const Head = styled.header<{ isScrolled: boolean }>`
   background: ${({ isScrolled }) => isScrolled && "rgba(27, 47, 69, 0.9)"};
-  padding: 12px 0;
+  padding: 24px 0;
+
   position: fixed;
   z-index: 99;
   transition: all 0.5s;
@@ -14,64 +15,67 @@ const Head = styled.header<{ isScrolled: boolean }>`
 `;
 const Container = styled.div`
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-left: 200px;
-  margin-right: 166px;
-  padding-right: 130px;
+  padding: 0 12px;
+  margin: 0 290px;
+
+  @media (max-width: 1680px) {
+    margin: 0 160px;
+  }
+  @media (max-width: 1590px) {
+    margin: 0 128px;
+  }
+  @media (max-width: 1380px) {
+    margin: 0 90px;
+  }
+  @media (max-width: 1278px) {
+    margin: 0;
+  }
 `;
 const Logo = styled.h1`
-  display: flex;
-  align-items: center;
   color: #fff;
   cursor: pointer;
-  padding-left: 12px;
-  margin-left: 90px;
 `;
 const Navbar = styled.nav`
   padding: 0;
-  width: 100%;
-  max-width: 680px;
-  transition: 0.3s;
 
   ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-shrink: 0;
     list-style: none;
-    align-items: center;
+    li {
+      padding: 15px 0 15px 30px;
+      font-family: var(--font-default);
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+      white-space: nowrap;
+      transition: 0.3s;
+      cursor: pointer;
+    }
   }
-  /* @media (max-width: 1366px) {
+  @media (max-width: 1278px) {
     display: none;
-  } */
-`;
-const List = styled.li`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 0 15px 30px;
-  font-family: var(--font-default);
-  font-size: 15px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.6);
-  white-space: nowrap;
-  transition: 0.3s;
-  cursor: pointer;
+  }
 `;
 
 const StyledBurger = styled.div<{ open: boolean }>`
-  width: 32px;
-  height: 32px;
- // display: none;
- // @media (max-width: 1366px) {
+  width: 28px;
+  height: 28px;
+  display: none;
+  @media (max-width: 1278px) {
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
-  //}
+  }
   div {
-    width: 32px;
-    height: 4px;
+    width: 28px;
+    height: 2px;
     background-color: ${({ open }) => (open ? "#ccc" : "#ffffff")};
     border-radius: 10px;
     transform-origin: 1px;
@@ -117,27 +121,25 @@ const Header = () => {
         <Logo>Nova</Logo>
         <Navbar>
           <ul>
-            <List>Home</List>
-            <List>About</List>
-            <List>Services</List>
-            <List>Portfolio</List>
-            <List>Team</List>
-            <List>Blog</List>
-            <List>Dropdown</List>
-            <List>Contact</List>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Portfolio</li>
+            <li>Team</li>
+            <li>Blog</li>
+            <li>Dropdown</li>
+            <li>Contact</li>
           </ul>
-<div  onClick={() => dispatch(setOpen(open))}>
-          <StyledBurger
-           
-            open={open}
-            style={{ marginLeft: "20px" }}
-          >
-            <div />
-            <div />
-            <div />
-          </StyledBurger>
-          </div>
         </Navbar>
+        <StyledBurger
+          onClick={() => dispatch(setOpen(open))}
+          open={open}
+          style={{ marginLeft: "20px" }}
+        >
+          <div />
+          <div />
+          <div />
+        </StyledBurger>
       </Container>
     </Head>
   );

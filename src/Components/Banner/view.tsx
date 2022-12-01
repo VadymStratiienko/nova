@@ -7,16 +7,15 @@ const Container = styled.section`
   background: url("${HeroBg}") top center no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  position: relative;
   min-height: 100vh;
   padding: 120px 0;
- 
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
- 
- 
+
   ::after {
     position: absolute;
     content: "";
@@ -31,25 +30,75 @@ const Container = styled.section`
     background: rgba(27, 47, 69, 0.6);
     inset: 0;
   }
+  @media (max-width: 1034px) {
+  ::after {
+    position: absolute;
+    content: normal;
+    width: 40%;
+    background: var(--color-secondary);
+    top: 0;
+    bottom: 0;
+  }
+}
+  @media (max-width: 1034px) {
+  ::before {
+    background: rgba(27, 47, 69, 0.7);
+   
+  }
+}
+@media (min-width: 1365px) {
+  
+    background-attachment: fixed;
+}
+  
 `;
 const Col = styled.div`
-flex-shrink: 2;
-z-index: 1;
-max-width: 440px;
---bs-gutter-x: 1.5rem;
---bs-gutter-y: 1;
-   margin-top: calc(-1 * var(--bs-gutter-y));
-   margin-right: calc(-1.5 * var(--bs-gutter-x));
-   margin-left: calc(12.5 * var(--bs-gutter-x));
+  flex-shrink: 1;
+  z-index: 1;
+  width: 420px;
+  margin-left: 290px;
+  padding-right: 30px;
 
+  @media (max-width: 1680px) {
+    margin: 0 160px;
+  }
+  @media (max-width: 1590px) {
+    margin: 0 128px;
+  }
+  @media (max-width: 1380px) {
+    margin: 0 90px;
+  }
+  @media (max-width: 1278px) {
+    margin: 0 50px;
+  }
+  @media (max-width: 1200px) {
+    margin: 0 50px;
+    width: 100%;
+  }
+  @media (max-width: 992px) {
+    margin: 0 100px;
+    max-width: 720px;
+  }
+  @media (max-width: 768px) {
+    max-width: 540px;
+  }
+  @media (max-width: 640px) {
+    margin-left: 20px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
   h2 {
-    
     z-index: 1;
     color: #fff;
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
     font-family: var(--font-secondary);
+    @media (max-width: 640px) {
+      font-size: 36px;
+      line-height: 1;
+    }
   }
   blockquote {
     z-index: 1;
@@ -74,12 +123,6 @@ max-width: 440px;
     margin-top: var(--bs-gutter-y);
   }
 `;
-// const Row = styled.div`
-
-
-
-//`;
-
 const BlockBtn = styled.div`
   z-index: 1;
   display: flex;
@@ -97,6 +140,12 @@ const ButtonStart = styled.a`
   transition: 0.5s;
   color: #fff;
   background: var(--color-primary);
+  :hover {
+    background: rgba(86, 184, 230, 0.8);
+  }
+  @media (max-width: 640px) {
+    font-size: 13px;
+  }
 `;
 const Play = styled(AiOutlinePlayCircle)`
   z-index: 1;
@@ -104,6 +153,9 @@ const Play = styled(AiOutlinePlayCircle)`
   width: 32px;
   color: var(--color-primary);
   margin-right: 5px;
+  :hover {
+    color: #82cbed;
+  }
 `;
 const BtnPlay = styled.a`
   z-index: 1;
@@ -115,6 +167,12 @@ const BtnPlay = styled.a`
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
   text-decoration: none;
+  :hover {
+    color: #fff;
+  }
+  @media (max-width: 640px) {
+    font-size: 13px;
+  }
 `;
 
 const Banner = () => {
