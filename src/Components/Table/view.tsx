@@ -8,29 +8,76 @@ import {
   BsCardChecklist,
 } from "react-icons/bs";
 
-const TableGrid = styled.section`
+const Container = styled.section`
+  padding-bottom: 80px;
+  overflow: hidden;
+  padding: 80px 0;
+  margin: 0 300px;
+  @media (max-width: 1680px) {
+    margin: 0 160px;
+  }
+  @media (max-width: 1590px) {
+    margin: 0 128px;
+  }
+  @media (max-width: 1500px) {
+    margin: 0 100px;
+  }
+  @media (max-width: 1400px) {
+    margin: 0 50px;
+  }
+  @media (max-width: 1380px) {
+    margin: 0 45px;
+  }
+  @media (max-width: 1278px) {
+    margin: 0 30px;
+  }
+`;
+const BlockHeader = styled.div`
+  text-align: center;
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+`;
+
+const TableGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  margin-right: calc(11.6 * var(--bs-gutter-x));
-  margin-left: calc(11.6 * var(--bs-gutter-x));
-  padding-bottom: 80px;
+
+  @media (max-width: 992px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
 `;
+
 const Block = styled.div`
   display: flex;
   flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    --bs-gutter-y: 3rem;
-    padding-right: calc(var(--bs-gutter-x) * 1);
-    padding-left: calc(var(--bs-gutter-x) * 1);
-    margin-top: var(--bs-gutter-y);
+  width: 100%;
+  max-width: 100%;
+  --bs-gutter-y: 3rem;
+  padding-right: calc(var(--bs-gutter-x) * 1);
+  @media (max-width: 768px) {
+    padding-top: 10px;
+  }
 `;
-const BlockText = styled.div`
-
-`
+const BlockText = styled.div``;
 const Briefcase = styled(BsBriefcase)`
   font-size: 32px;
   line-height: 0;
@@ -81,7 +128,6 @@ const Link = styled.a`
   text-decoration: none;
   transition: 0.3s;
   cursor: pointer;
-
   ::after {
     position: absolute;
     top: 0;
@@ -89,110 +135,114 @@ const Link = styled.a`
     bottom: 0;
     left: 0;
     z-index: 1;
- 
+    content: "";
   }
 `;
-
 const Text = styled.p`
   line-height: 24px;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 1rem;
-`
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+`;
 
 const Table = () => {
   return (
-    <TableGrid  data-aos="fade-up"   data-aos-duration="1000">
-      <Block>
-        <BlockIcon>
-          <Briefcase />
-        </BlockIcon>
-        <BlockText>
-          <H4>
-            <Link href="#">Lorem Ipsum</Link>
-          </H4>
-          <Text>
-            Voluptatum deleniti atque corrupti quos dolores et quas molestias
-            excepturi sint occaecati cupiditate non provident
-          </Text>
-        </BlockText>
-      </Block>
+    <Container>
+      <BlockHeader data-aos="fade-up" data-aos-duration="1000">
+        <h2>Our Services</h2>
+      </BlockHeader>
+      <TableGrid data-aos="fade-up" data-aos-duration="1000">
+        <Block>
+          <BlockIcon>
+            <Briefcase />
+          </BlockIcon>
+          <BlockText>
+            <H4>
+              <Link href="#">Lorem Ipsum</Link>
+            </H4>
+            <Text>
+              Voluptatum deleniti atque corrupti quos dolores et quas molestias
+              excepturi sint occaecati cupiditate non provident
+            </Text>
+          </BlockText>
+        </Block>
 
-      <Block>
-        <BlockIcon>
-          <CardChecklist />
-        </BlockIcon>
-        <BlockText>
-          <H4>
-            <Link href="#">Dolor Sitema</Link>
-          </H4>
-          <Text>
-            Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat tarad limino ata
-          </Text>
-        </BlockText>
-      </Block>
+        <Block>
+          <BlockIcon>
+            <CardChecklist />
+          </BlockIcon>
+          <BlockText>
+            <H4>
+              <Link href="#">Dolor Sitema</Link>
+            </H4>
+            <Text>
+              Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat tarad limino ata
+            </Text>
+          </BlockText>
+        </Block>
 
-      <Block>
-        <BlockIcon>
-          <BarChart />
-        </BlockIcon>
-        <BlockText>
-          <H4>
-            <Link href="#">Sed ut perspiciatis</Link>
-          </H4>
-          <Text>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur
-          </Text>
-        </BlockText>
-      </Block>
+        <Block>
+          <BlockIcon>
+            <BarChart />
+          </BlockIcon>
+          <BlockText>
+            <H4>
+              <Link href="#">Sed ut perspiciatis</Link>
+            </H4>
+            <Text>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur
+            </Text>
+          </BlockText>
+        </Block>
 
-      <Block>
-        <BlockIcon>
-          <Binoculars />
-        </BlockIcon>
-        <BlockText>
-          <H4>
-            <Link href="#">Magni Dolores</Link>
-          </H4>
-          <Text>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum
-          </Text>
-        </BlockText>
-      </Block>
+        <Block>
+          <BlockIcon>
+            <Binoculars />
+          </BlockIcon>
+          <BlockText>
+            <H4>
+              <Link href="#">Magni Dolores</Link>
+            </H4>
+            <Text>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum
+            </Text>
+          </BlockText>
+        </Block>
 
-      <Block>
-        <BlockIcon>
-          <BrightnessHigh />
-        </BlockIcon>
-        <BlockText>
-          <H4>
-            <Link href="#">Nemo Enim</Link>
-          </H4>
-          <Text>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque
-          </Text>
-        </BlockText>
-      </Block>
+        <Block>
+          <BlockIcon>
+            <BrightnessHigh />
+          </BlockIcon>
+          <BlockText>
+            <H4>
+              <Link href="#">Nemo Enim</Link>
+            </H4>
+            <Text>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque
+            </Text>
+          </BlockText>
+        </Block>
 
-      <Block>
-        <BlockIcon>
-          <Calendar4Week />
-        </BlockIcon>
-        <BlockText>
-          <H4>
-            <Link href="#">Eiusmod Tempor</Link>
-          </H4>
-          <Text>
-            Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-            tempore, cum soluta nobis est eligendi
-          </Text>
-        </BlockText>
-      </Block>
-    </TableGrid>
+        <Block>
+          <BlockIcon>
+            <Calendar4Week />
+          </BlockIcon>
+          <BlockText>
+            <H4>
+              <Link href="#">Eiusmod Tempor</Link>
+            </H4>
+            <Text>
+              Et harum quidem rerum facilis est et expedita distinctio. Nam
+              libero tempore, cum soluta nobis est eligendi
+            </Text>
+          </BlockText>
+        </Block>
+      </TableGrid>
+    </Container>
   );
 };
 

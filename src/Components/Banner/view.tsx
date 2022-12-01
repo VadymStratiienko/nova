@@ -56,7 +56,7 @@ const Col = styled.div`
   flex-shrink: 1;
   z-index: 1;
   width: 420px;
-  margin-left: 290px;
+  margin-left: 300px;
   padding-right: 30px;
 
   @media (max-width: 1680px) {

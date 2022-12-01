@@ -31,9 +31,10 @@ const Block = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  flex-shrink: 1;
 `;
 
-const Slider = () => {
+const SwiperShow = () => {
   return (
     <>
       <Swiper
@@ -114,4 +115,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default SwiperShow;

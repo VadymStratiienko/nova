@@ -15,7 +15,7 @@ const Container = styled.section`
   padding-bottom: 0;
   overflow: hidden;
   padding: 80px 0;
-  padding-bottom: 0;
+
 
   img {
     width: 340px;

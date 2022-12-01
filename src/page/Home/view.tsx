@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "../../Components/Banner/view";
 import Landing from "../../Components/Landing/view";
 

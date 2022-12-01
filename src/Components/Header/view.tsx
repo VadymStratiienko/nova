@@ -7,7 +7,6 @@ import { setOpen } from "../../redux/burgerMenuSlice";
 const Head = styled.header<{ isScrolled: boolean }>`
   background: ${({ isScrolled }) => isScrolled && "rgba(27, 47, 69, 0.9)"};
   padding: 24px 0;
-
   position: fixed;
   z-index: 99;
   transition: all 0.5s;
