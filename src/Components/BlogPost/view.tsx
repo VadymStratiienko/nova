@@ -11,8 +11,7 @@ const Container = styled.div`
   margin-left: auto;
   overflow: hidden;
   padding: 80px 0;
-  margin-left:170px;
-  margin-right: 170px;
+
 `;
 const SectionHeader = styled.div`
   text-align: center;
@@ -41,11 +40,10 @@ const SectionHeader = styled.div`
 const Posts = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  /* column-gap: 10px; */
+flex-direction: row;
+justify-content: center;
+  column-gap: 35px;
   --bs-gutter-y: 3rem;
-  margin-right: calc(3.5 * var(--bs-gutter-x));
-  margin-left: calc(3.5 * var(--bs-gutter-x));
 `;
 
 const Post = styled.div`
