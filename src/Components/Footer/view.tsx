@@ -13,23 +13,26 @@ const ContainerFooter = styled.footer`
   margin-left: auto;
   z-index: 99;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 `;
 const FooterContent = styled.div`
   background-color: #f7f9fc;
-  background-size: contain;
+  width: 100%;
+  background-size: cover;
   padding: 60px 0 30px 0;
 `;
 const Container = styled.div`
-  --bs-gutter-x: 1rem;
-  --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 1.5);
-  padding-left: calc(var(--bs-gutter-x) * 18.5);
   margin-right: auto;
   margin-left: auto;
 `;
 const Row = styled.div`
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   column-gap: 80px;
 `;
 const FooterInfo = styled.div`
