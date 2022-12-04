@@ -5,7 +5,10 @@ import Blog2 from "../../assets/img/blog/blog-2.jpg";
 import Blog3 from "../../assets/img/blog/blog-3.jpg";
 import Blog4 from "../../assets/img/blog/blog-4.jpg";
 
-const Container = styled.section`
+const Container = styled.div`
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   overflow: hidden;
   padding: 80px 0;
   margin-left:170px;
@@ -124,6 +127,7 @@ const Text = styled.p`
 
 function BlogPost() {
   return (
+    <section>
     <Container  data-aos="fade-up"   data-aos-duration="1000">
       <SectionHeader>
         <h2>Recent Blog Posts</h2>
@@ -223,6 +227,7 @@ function BlogPost() {
         </Post>
       </Posts>
     </Container>
+    </section>
   );
 }
 

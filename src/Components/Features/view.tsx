@@ -11,33 +11,61 @@ import {
 } from "react-icons/ri";
 import Iphpne from "../../assets/img/iphone.png";
 
-const Container = styled.section`
+const Container = styled.div`
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   padding-bottom: 0;
   overflow: hidden;
   padding: 80px 0;
-
-
-  img {
-    width: 340px;
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-  }
 `;
+
 const TopBlock = styled.div`
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 12);
+  padding-right: calc(var(--bs-gutter-x) * 12.5);
   padding-left: calc(var(--bs-gutter-x) * 12.5);
   margin-right: auto;
   margin-left: auto;
+  
   h3 {
     color: var(--color-secondary);
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 30px;
     font-family: var(--font-primary);
+  }
+
+  @media (max-width: 1680px) {
+    padding-right: calc(var(--bs-gutter-x) * 6);
+    padding-left: calc(var(--bs-gutter-x) * 6);
+  }
+  @media (max-width: 1590px) {
+    padding-right: calc(var(--bs-gutter-x) * 5);
+    padding-left: calc(var(--bs-gutter-x) * 5);
+  }
+  @media (max-width: 1380px) {
+    padding-right: calc(var(--bs-gutter-x) * 4);
+    padding-left: calc(var(--bs-gutter-x) * 4);
+  }
+  @media (max-width: 1278px) {
+    padding-right: calc(var(--bs-gutter-x) * 3);
+    padding-left: calc(var(--bs-gutter-x) * 3);
+  }
+  @media (max-width: 1200px) {
+    padding-right: calc(var(--bs-gutter-x) * 1);
+    padding-left: calc(var(--bs-gutter-x) * 1);
+  }
+
+  @media (max-width: 992px) {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+
+  }
+  @media (max-width: 768px) {
+    padding-right: calc(var(--bs-gutter-x) * 2);
+    padding-left: calc(var(--bs-gutter-x) * 2);
   }
 `;
 const Grid = styled.div`
@@ -47,6 +75,10 @@ const Grid = styled.div`
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   padding-left: calc(var(--bs-gutter-x) * 0.5);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
 `;
 const StoreLine = styled(RiStoreLine)`
   color: #ffbb2c;
@@ -97,11 +129,45 @@ const BaseStationLine = styled(RiBaseStationLine)`
   line-height: 1.2;
 `;
 const Row = styled.div`
-  display: flex;
-  justify-content: space-between;
+display: flex; 
+position: relative;
+  @media (max-width:1024px){
+
+  }
+  @media (max-width: 992px) {
+   
+  }
+  @media (max-width: 768px) {
+    display: flex; 
+flex-wrap: wrap;
+  }
 `;
+const PhoneWrapper = styled.div`
+z-index: 2;
+position: absolute;
+    right: 0;
+    img {
+    width: 340px;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    @media (max-width: 992px) {
+     z-index: 2;
+     margin-top: 330px;
+  }  
+  @media (max-width: 768px) {
+    height: auto;
+    max-width: 100%;
+ margin-top:30px;
+  }
+  }
+  @media (max-width: 768px) {
+    position: relative;
+ margin-top:0;
+ width: 100%;
+  }
+`
 const Block = styled.div`
-  display: flex;
 
   span {
     font-size: 18px;
@@ -111,27 +177,30 @@ const Block = styled.div`
 const Box = styled.div`
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: -1.5rem;
-  display: flex;
-  flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 `;
 const Details = styled.div`
-  margin-top: -250px;
+margin-top: 80px;
   padding: 120px 0;
   background-color: #f7f9fc;
 `;
 const DetailRow = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex-wrap: wrap;
   --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 30.5);
+  max-width: 700px;
   padding-left: calc(var(--bs-gutter-x) * 12.5);
+  @media (max-width: 992px) {
+    width: 400px;
+  }
+  @media (max-width: 768px) {
+    width: 300px;
+  }
 
   h4 {
     color: var(--color-secondary);
@@ -156,100 +225,121 @@ const DetailRow = styled.div`
     color: #fff;
     text-decoration: none;
   }
+  @media (max-width: 1680px) {
+    padding-left: calc(var(--bs-gutter-x) * 6);
+  }
+  @media (max-width: 1590px) {
+    padding-left: calc(var(--bs-gutter-x) * 5);
+  }
+  @media (max-width: 1380px) {
+    padding-left: calc(var(--bs-gutter-x) * 4);
+  }
+  @media (max-width: 1278px) {
+    padding-left: calc(var(--bs-gutter-x) * 3);
+    max-width: 570px;
+  }
+  @media (max-width: 1200px) {
+    padding-left: calc(var(--bs-gutter-x) * 1.2);
+  }
+
+  @media (max-width: 992px) {
+    padding-left: calc(var(--bs-gutter-x) * 1);
+  }
+  @media (max-width: 768px) {
+    padding-left: calc(var(--bs-gutter-x) * 1);
+  }
 `;
 const Features = () => {
   return (
-    <Container  data-aos="fade-up"   data-aos-duration="1000">
-      <TopBlock>
-        <Row>
-          <div>
-            <h3>
-              Powerful Features for <br />
-              Your Business
-            </h3>
-
-            <Grid>
-              <Block>
-                <Box>
-                  <StoreLine />
-                  <span>Easy Cart Features</span>
-                </Box>
-              </Block>
-
-              <Block>
-                <Box>
-                  <BarChartBoxLine />
-                  <span>Sit amet consectetur adipisicing</span>
-                </Box>
-              </Block>
-
-              <Block>
-                <Box>
-                  <CalendarTodoLine />
-                  <span>Ipsum Rerum Explicabo</span>
-                </Box>
-              </Block>
-
-              <Block>
-                <Box>
-                  <PaintBrushLine />
-                  <span>Easy Cart Features</span>
-                </Box>
-              </Block>
-
-              <Block>
-                <Box>
-                  <Database2Line />
-                  <span>Easy Cart Features</span>
-                </Box>
-              </Block>
-
-              <Block>
-                <Box>
-                  <GradienterLine />
-                  <span>Sit amet consectetur adipisicing</span>
-                </Box>
-              </Block>
-
-              <Block>
-                <Box>
-                  <FileList3Line />
-                  <span>Ipsum Rerum Explicabo</span>
-                </Box>
-              </Block>
-
-              <Block>
-                <Box>
-                  <BaseStationLine />
-                  <span>Easy Cart Features</span>
-                </Box>
-              </Block>
-            </Grid>
-          </div>
-          <div>
+    <section>
+      <Container data-aos="fade-up" data-aos-duration="1000">
+        <TopBlock>
+          <Row>
             <div>
-              <img src={Iphpne} alt="" />
-            </div>
-          </div>
-        </Row>
-      </TopBlock>
+              <h3>
+                Powerful Features for <br />
+                Your Business
+              </h3>
+              <Grid>
+                <Block>
+                  <Box>
+                    <StoreLine />
+                    <span>Easy Cart Features</span>
+                  </Box>
+                </Block>
 
-      <Details>
-        <DetailRow>
-          <h4>
-            Labore Sdio Lidui
-            <br />
-            Bonde Naruto
-          </h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-            nostrum molestias doloremque quae delectus odit minima corrupti
-            blanditiis quo animi!
-          </p>
-          <a href="#about">Get Started</a>
-        </DetailRow>
-      </Details>
-    </Container>
+                <Block>
+                  <Box>
+                    <BarChartBoxLine />
+                    <span>Sit amet consectetur adipisicing</span>
+                  </Box>
+                </Block>
+
+                <Block>
+                  <Box>
+                    <CalendarTodoLine />
+                    <span>Ipsum Rerum Explicabo</span>
+                  </Box>
+                </Block>
+
+                <Block>
+                  <Box>
+                    <PaintBrushLine />
+                    <span>Easy Cart Features</span>
+                  </Box>
+                </Block>
+
+                <Block>
+                  <Box>
+                    <Database2Line />
+                    <span>Easy Cart Features</span>
+                  </Box>
+                </Block>
+
+                <Block>
+                  <Box>
+                    <GradienterLine />
+                    <span>Sit amet consectetur adipisicing</span>
+                  </Box>
+                </Block>
+
+                <Block>
+                  <Box>
+                    <FileList3Line />
+                    <span>Ipsum Rerum Explicabo</span>
+                  </Box>
+                </Block>
+
+                <Block>
+                  <Box>
+                    <BaseStationLine />
+                    <span>Easy Cart Features</span>
+                  </Box>
+                </Block>
+              </Grid>
+            </div>
+            <PhoneWrapper>
+              <img src={Iphpne} alt="" />
+            </PhoneWrapper>
+          </Row>
+        </TopBlock>
+        <Details>
+          <DetailRow>
+            <h4>
+              Labore Sdio Lidui
+              <br />
+              Bonde Naruto
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+              nostrum molestias doloremque quae delectus odit minima corrupti
+              blanditiis quo animi!
+            </p>
+            <a href="#about">Get Started</a>
+          </DetailRow>
+        </Details>
+      </Container>
+    </section>
   );
 };
 

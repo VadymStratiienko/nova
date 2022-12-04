@@ -11,6 +11,8 @@ const Head = styled.header<{ isScrolled: boolean }>`
   z-index: 99;
   transition: all 0.5s;
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 `;
 const Container = styled.div`
   display: flex;

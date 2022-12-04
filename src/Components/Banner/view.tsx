@@ -2,8 +2,10 @@ import styled from "styled-components";
 import HeroBg from "../../assets/img/hero-bg.jpg";
 import { AiOutlinePlayCircle } from "react-icons/ai";
 
-const Container = styled.section`
+const Container = styled.div`
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   background: url("${HeroBg}") top center no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -177,28 +179,30 @@ const BtnPlay = styled.a`
 
 const Banner = () => {
   return (
-    <Container>
-      <Col>
-        <h2 data-aos="fade-up" data-aos-duration="1000">
-          Focus On What Matters
-        </h2>
-        <blockquote data-aos="fade-up" data-aos-duration="1000">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Perspiciatis cum recusandae eum laboriosam voluptatem repudiandae
-            odio, vel exercitationem officiis provident minima.
-          </p>
-        </blockquote>
-        <BlockBtn data-aos="fade-up" data-aos-duration="1000">
-          <ButtonStart>Get Started</ButtonStart>
-          <BtnPlay href="#">
-            {" "}
-            <Play />
-            <span>Watch Video</span>
-          </BtnPlay>
-        </BlockBtn>
-      </Col>
-    </Container>
+    <section>
+      <Container>
+        <Col>
+          <h2 data-aos="fade-up" data-aos-duration="1000">
+            Focus On What Matters
+          </h2>
+          <blockquote data-aos="fade-up" data-aos-duration="1000">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perspiciatis cum recusandae eum laboriosam voluptatem repudiandae
+              odio, vel exercitationem officiis provident minima.
+            </p>
+          </blockquote>
+          <BlockBtn data-aos="fade-up" data-aos-duration="1000">
+            <ButtonStart>Get Started</ButtonStart>
+            <BtnPlay href="#">
+              {" "}
+              <Play />
+              <span>Watch Video</span>
+            </BtnPlay>
+          </BlockBtn>
+        </Col>
+      </Container>
+    </section>
   );
 };
 

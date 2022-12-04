@@ -2,10 +2,13 @@ import styled from "styled-components";
 import BgImg from "../../assets/img/why-us-bg.jpg";
 import SwiperShow from "../SwiperShow/view";
 
-const Container = styled.section`
+const Container = styled.div`
   padding-bottom: 0;
   overflow: hidden;
   padding: 80px 0;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   @media (max-width: 1680px) {
     margin: 0 160px;
   }
@@ -73,6 +76,7 @@ const SectionDiv = styled.div`
 
 const SliderShow = () => {
   return (
+    <section>
     <Container>
       <SectionDiv>
         <SectionHeader data-aos="fade-up" data-aos-duration="1000">
@@ -88,6 +92,7 @@ const SliderShow = () => {
         </div>
       </BlockSlider>
     </Container>
+    </section>
   );
 };
 

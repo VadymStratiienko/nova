@@ -8,7 +8,10 @@ import {
 import styled from "styled-components";
 
 const ContainerFooter = styled.footer`
-z-index: 99;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 99;
   font-size: 14px;
 `;
 const FooterContent = styled.div`
@@ -100,15 +103,15 @@ const FooterLinks = styled.div`
 `;
 
 const FooterBy = styled.div`
-padding: 30px 0;
-display: flex;
-justify-content:center;
-align-items: center;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-div{
-  text-align: center;
-}
-`
+  div {
+    text-align: center;
+  }
+`;
 
 function Footer() {
   return (

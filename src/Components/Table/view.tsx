@@ -8,7 +8,7 @@ import {
   BsCardChecklist,
 } from "react-icons/bs";
 
-const Container = styled.section`
+const Container = styled.div`
   padding-bottom: 80px;
   overflow: hidden;
   padding: 80px 0;
@@ -128,15 +128,6 @@ const Link = styled.a`
   text-decoration: none;
   transition: 0.3s;
   cursor: pointer;
-  ::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    content: "";
-  }
 `;
 const Text = styled.p`
   line-height: 24px;
@@ -147,6 +138,7 @@ const Text = styled.p`
 
 const Table = () => {
   return (
+    <section>
     <Container>
       <BlockHeader data-aos="fade-up" data-aos-duration="1000">
         <h2>Our Services</h2>
@@ -243,6 +235,7 @@ const Table = () => {
         </Block>
       </TableGrid>
     </Container>
+    </section>
   );
 };
 
