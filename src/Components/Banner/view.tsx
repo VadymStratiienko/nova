@@ -1,6 +1,9 @@
+import {useState} from "react"
 import styled from "styled-components";
 import HeroBg from "../../assets/img/hero-bg.jpg";
-import { AiOutlinePlayCircle } from "react-icons/ai";
+
+import Modal from "../Modal/view";
+import ModalVideo from "../Modal/view";
 
 const Container = styled.div`
   width: 100%;
@@ -149,16 +152,7 @@ const ButtonStart = styled.a`
     font-size: 13px;
   }
 `;
-const Play = styled(AiOutlinePlayCircle)`
-  z-index: 1;
-  height: 32px;
-  width: 32px;
-  color: var(--color-primary);
-  margin-right: 5px;
-  :hover {
-    color: #82cbed;
-  }
-`;
+
 const BtnPlay = styled.a`
   z-index: 1;
   display: flex !important;
@@ -169,6 +163,9 @@ const BtnPlay = styled.a`
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
   text-decoration: none;
+   cursor: pointer;
+  
+ 
   :hover {
     color: #fff;
   }
@@ -177,8 +174,10 @@ const BtnPlay = styled.a`
   }
 `;
 
-const Banner = () => {
+const Banner = ({children}:any) => {
+
   return (
+  
     <section>
       <Container>
         <Col>
@@ -194,11 +193,7 @@ const Banner = () => {
           </blockquote>
           <BlockBtn data-aos="fade-up" data-aos-duration="1000">
             <ButtonStart>Get Started</ButtonStart>
-            <BtnPlay href="#">
-              {" "}
-              <Play />
-              <span>Watch Video</span>
-            </BtnPlay>
+           <ModalVideo />
           </BlockBtn>
         </Col>
       </Container>

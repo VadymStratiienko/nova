@@ -5,6 +5,7 @@ import Header from "./Components/Header/view";
 import Home from "./page/Home/view";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import  { ModalProvider } from "styled-react-modal";
 
 function App() {
   useEffect(() => {
@@ -12,13 +13,13 @@ function App() {
     AOS.refresh();
   }, []);
   return (
-    <>
+    <ModalProvider>
       <Header />
       <Home />
       <Footer />
       <ScrollToTop smooth className="scroll-to-top" color="white" />
-    </>
-  );
+      </ModalProvider>
+  )
 }
 
 export default App;
