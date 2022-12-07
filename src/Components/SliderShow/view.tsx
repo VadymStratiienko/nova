@@ -68,6 +68,18 @@ const SectionHeader = styled.h2`
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  ::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--color-primary);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
 `;
 const SectionDiv = styled.div`
   text-align: center;

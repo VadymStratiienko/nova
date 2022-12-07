@@ -5,7 +5,7 @@ import Features from "../Features/view";
 import SliderShow from "../SliderShow/view";
 import Table from "../Table/view";
 
-const Container = styled.article`
+const Container = styled.div`
   position: relative;
   min-height: 100vh;
   background-color: white;
@@ -19,6 +19,7 @@ const Container = styled.article`
 
 const Landing = () => {
   return (
+    <section>
     <Container>
       <SliderShow />
       <Table />
@@ -26,6 +27,7 @@ const Landing = () => {
       <Features />
       <BlogPost />
     </Container>
+    </section>
   );
 };
 

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { RootState } from "../../redux/store";
 import { setOpen } from "../../redux/burgerMenuSlice";
+import { NavLink } from "react-router-dom";
 
 const Head = styled.header<{ isScrolled: boolean }>`
   background: ${({ isScrolled }) => isScrolled && "rgba(27, 47, 69, 0.9)"};
@@ -116,20 +117,55 @@ const Header = () => {
     };
   }, []);
 
+  let routes = [
+    {
+      title: "Home",
+      link: "/",
+    },
+    {
+      title: "About",
+      link: "about",
+    },
+    {
+      title: "Services",
+      link: "services",
+    },
+    {
+      title: "Portfolio",
+      link: "portfolio",
+    },
+    {
+      title: "Team",
+      link: "team",
+    },
+    {
+      title: "Blog",
+      link: "blog",
+    },
+    {
+      title: "Contact",
+      link: "contact",
+    },
+  ];
+
   return (
     <Head isScrolled={isScrolled}>
       <Container data-aos="fade-up">
         <Logo>Nova</Logo>
         <Navbar>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Portfolio</li>
-            <li>Team</li>
-            <li>Blog</li>
-            <li>Dropdown</li>
-            <li>Contact</li>
+            {routes.map((el, index) => {
+              return(
+                <li key={index}>
+                  <NavLink
+                  style={({isActive}) => ({
+                    textDecoration: "none",
+                    color: isActive ?  'white' :'rgba(255, 255, 255, 0.6)'
+                  })}
+                   to={el.link}>{el.title}</NavLink>
+                </li>
+              )
+            })}
           </ul>
         </Navbar>
         <StyledBurger

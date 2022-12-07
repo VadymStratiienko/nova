@@ -1,10 +1,10 @@
-import Banner from "../../Components/Banner/view";
-import Landing from "../../Components/Landing/view";
+import BannerHome from "../../Components/BannerHome/view";
+import Landing from "../../Components/LandingHome/view";
 
 function Home() {
   return (
     <main>
-      <Banner />
+      <BannerHome />
       <Landing />
     </main>
   );

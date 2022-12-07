@@ -1,8 +1,5 @@
-import {useState} from "react"
 import styled from "styled-components";
 import HeroBg from "../../assets/img/hero-bg.jpg";
-
-import Modal from "../Modal/view";
 import ModalVideo from "../Modal/view";
 
 const Container = styled.div`
@@ -153,28 +150,7 @@ const ButtonStart = styled.a`
   }
 `;
 
-const BtnPlay = styled.a`
-  z-index: 1;
-  display: flex !important;
-  align-items: center;
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 600;
-  text-decoration: none;
-   cursor: pointer;
-  
- 
-  :hover {
-    color: #fff;
-  }
-  @media (max-width: 640px) {
-    font-size: 13px;
-  }
-`;
-
-const Banner = ({children}:any) => {
+const BannerHome = ({children}:any) => {
 
   return (
   
@@ -201,4 +177,4 @@ const Banner = ({children}:any) => {
   );
 };
 
-export default Banner;
+export default BannerHome;
