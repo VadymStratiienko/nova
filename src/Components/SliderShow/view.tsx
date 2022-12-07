@@ -25,7 +25,7 @@ const Container = styled.div`
     margin: 0 45px;
   }
   @media (max-width: 1278px) {
-    margin: 0 30px;
+    margin: 0 auto;
   }
 `;
 const BlockSlider = styled.div`

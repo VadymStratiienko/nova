@@ -13,6 +13,23 @@ const Block = styled.div`
   display: flex;
   margin-right: calc(var(--bs-gutter-x) * 12.2);
   margin-left: calc(var(--bs-gutter-x) * 12.2);
+
+  @media (max-width: 1400px) {
+    margin-right: calc(var(--bs-gutter-x) * 3.8);
+    margin-left: calc(var(--bs-gutter-x) * 3.8);
+  }
+  @media (max-width: 1200px) {
+    margin-right: calc(var(--bs-gutter-x) * 3);
+    margin-left: calc(var(--bs-gutter-x) * 3);
+  }
+  @media (max-width: 1100px) {
+    margin-right: calc(var(--bs-gutter-x) * 2);
+    margin-left: calc(var(--bs-gutter-x) * 2);
+  }
+  @media (max-width:992px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const BlockImg = styled.div`
@@ -54,14 +71,17 @@ const Content = styled.div`
       font-weight: 600;
     }
   }
+  @media (max-width:992px) {
+      padding: 0;
+  }
 `;
-const Check = styled(BsCheckCircleFill)` 
+const Check = styled(BsCheckCircleFill)`
   position: absolute;
   font-size: 20px;
   left: 0;
   top: -3px;
   color: var(--color-primary);
-`
+`;
 
 const AboutUs = () => {
   return (
@@ -81,17 +101,16 @@ const AboutUs = () => {
                 cupidatat non proident
               </p>
               <ul>
-                
                 <li>
-                <Check />
+                  <Check />
                   Ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </li>
                 <li>
-                <Check />
+                  <Check />
                   Duis aute irure dolor in reprehenderit in voluptate velit.
                 </li>
                 <li>
-                <Check />
+                  <Check />
                   Ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </li>
               </ul>

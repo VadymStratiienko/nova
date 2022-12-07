@@ -14,8 +14,7 @@ const Container = styled.div`
   padding: 80px 0;
 `;
 const TeamContainer = styled.div`
-  margin-right: calc(var(--bs-gutter-x) * 12.2);
-  margin-left: calc(var(--bs-gutter-x) * 12.2);
+margin: 0 auto;
 `;
 const SectionHeader = styled.div`
   text-align: center;
