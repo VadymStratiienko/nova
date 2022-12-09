@@ -6,8 +6,9 @@ import Home from "./page/Home/view";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import  { ModalProvider } from "styled-react-modal";
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import About from "./page/About/view";
+import Services from "./page/Services/view";
 
 function App() {
   useEffect(() => {
@@ -19,7 +20,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/about" element={<About />}/>
+        <Route path="about" element={<About />}/>
+        <Route path="services" element={<Services />}/>
       </Routes>
       <Footer />
       <ScrollToTop smooth className="scroll-to-top" color="white" />

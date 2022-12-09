@@ -150,7 +150,7 @@ const ButtonStart = styled.a`
   }
 `;
 
-const BannerHome = ({children}:any) => {
+const BannerHome = () => {
 
   return (
   

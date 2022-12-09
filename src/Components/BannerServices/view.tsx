@@ -1,24 +1,23 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import AboutHeader from "../../assets/img/about-header.jpg";
+import ServicesHeader from "../../assets/img/services-header.jpg"
 
-const Container = styled.div`
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 140px 0 60px 0;
-  min-height: 30vh;
-  position: relative;
-  background-image: url("${AboutHeader}") ;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  ::before{
+
+const Container  = styled.div`
+   width: 100%;
+   background-image:url("${ServicesHeader}") ;
+   padding: 140px 0 60px ;
+    min-height: 30vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    ::before {
     content: "";
     background-color: rgba(27, 47, 69, 0.7);
     position: absolute;
     inset: 0;
-  }
+}
 `;
 const Block = styled.div`
   padding: 0 12px;
@@ -52,7 +51,7 @@ const Block = styled.div`
     content: "/";
   }
 `;
-const ALink = styled(Link)`
+const SLink = styled(Link)`
 text-decoration: none;
 color: rgba(255, 255, 255, 0.8);
     transition: 0.3s;
@@ -61,22 +60,23 @@ color: rgba(255, 255, 255, 0.8);
     }
 `
 
-const BannerAbout = () => {
+
+const BannerServices = () => {
   return (
     <section>
-      <Container>
+        <Container>
         <Block>
-          <h2>About</h2>
+          <h2>Services</h2>
           <ol>
             <li>
-              <ALink to="/">Home</ALink>
+              <SLink to="/">Home</SLink>
             </li> 
-            <li>About</li>
+            <li>Services</li>
           </ol>
         </Block>
-      </Container>
+        </Container>
     </section>
-  );
-};
+  )
+}
 
-export default BannerAbout;
+export default BannerServices

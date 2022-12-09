@@ -1,0 +1,29 @@
+.mySwiper {
+  max-height: 450px;
+}
+.mySwiper2.swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: white;
+  margin: 0 auto;
+}
+
+.mySwiper2 
+
+.mySwiper2.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper2.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+}

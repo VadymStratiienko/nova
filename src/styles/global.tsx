@@ -32,6 +32,7 @@ body{
 
 .scroll-to-top {
   background: var(--color-primary);
+  z-index:99;
 
   svg {
     height:15px;

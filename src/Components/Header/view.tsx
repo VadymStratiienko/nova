@@ -42,6 +42,9 @@ const Logo = styled.h1`
 `;
 const Navbar = styled.nav`
   padding: 0;
+  li:hover>a  a:hover li:hover{
+    color: #fff;
+  }
 
   ul {
     margin: 0;
