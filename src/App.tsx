@@ -3,12 +3,16 @@ import ScrollToTop from "react-scroll-to-top";
 import Footer from "./Components/Footer/view";
 import Header from "./Components/Header/view";
 import Home from "./page/Home/view";
-import "aos/dist/aos.css";
-import AOS from "aos";
-import  { ModalProvider } from "styled-react-modal";
-import { Route, Routes } from 'react-router-dom';
 import About from "./page/About/view";
 import Services from "./page/Services/view";
+import Portfolio from "./page/Portfolio/view";
+import PortfolioDetals from "./page/PortfolioDetals/view";
+import { ModalProvider } from "styled-react-modal";
+import { Route, Routes } from "react-router-dom";
+
+import "aos/dist/aos.css";
+import AOS from "aos";
+
 
 function App() {
   useEffect(() => {
@@ -19,14 +23,16 @@ function App() {
     <ModalProvider>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="about" element={<About />}/>
-        <Route path="services" element={<Services />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
+        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="/portfolio-detals" element={<PortfolioDetals />} />
       </Routes>
       <Footer />
       <ScrollToTop smooth className="scroll-to-top" color="white" />
-      </ModalProvider>
-  )
+    </ModalProvider>
+  );
 }
 
 export default App;

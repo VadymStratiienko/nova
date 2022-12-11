@@ -26,6 +26,7 @@ const WrapperCards = styled.div`
 
 const Card = styled.div`
   display: flex;
+  max-width: 650px;
   @media(max-width:1350px) {
     display: flex;
     flex-direction: column;
