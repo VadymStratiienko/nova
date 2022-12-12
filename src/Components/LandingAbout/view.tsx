@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import AboutUs from '../AboutUs/view';
 import CallToAction from '../CallToAction/view';
 import SliderShow from '../SliderShow/view';
-import Team from '../Team/view';
+import TeamComponent from '../TeamComponent/view';
 
 const Container = styled.div`
   width: 100%;
@@ -22,7 +22,7 @@ const LandingAbout = () => {
         <AboutUs />
         <SliderShow />
         <CallToAction />
-        <Team />
+        <TeamComponent />
       </Container>
     </section>
   )

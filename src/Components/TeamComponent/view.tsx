@@ -130,7 +130,7 @@ const Linkedin = styled(BsLinkedin)`
   line-height: 0;
 `;
 
-const Team = () => {
+const TeamComponent = () => {
   return (
     <section>
       <Container>
@@ -238,4 +238,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default TeamComponent;

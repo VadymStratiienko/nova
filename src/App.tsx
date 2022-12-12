@@ -12,6 +12,8 @@ import { Route, Routes } from "react-router-dom";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
+import Team from "./page/Team/view";
+import Blog from "./page/Blog/view";
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
         <Route path="services" element={<Services />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="/portfolio-detals" element={<PortfolioDetals />} />
+        <Route path="team" element={<Team />} />
+        <Route path="blog" element={<Blog />} />
       </Routes>
       <Footer />
       <ScrollToTop smooth className="scroll-to-top" color="white" />
