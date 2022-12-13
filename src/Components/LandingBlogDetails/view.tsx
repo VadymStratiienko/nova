@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import BarComponent from "../Bar/view";
-import BlogComponent from "../BlogComponent/view";
+import PostDetails from "../Post/view";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -9,22 +9,22 @@ const Container = styled.div`
   overflow: hidden;
   padding: 80px 0;
   display: flex;
-  
+  justify-content:center;
   max-width: 1344px;
   @media (max-width: 1350px) {
     flex-wrap: wrap;
   }
 `;
 
-const LandingBlog = () => {
+const LandingBlogDetails = () => {
   return (
     <section>
-      <Container>
-        <BlogComponent />
-       <BarComponent />
-      </Container>
+    <Container>
+      <PostDetails />
+        <BarComponent />
+    </Container>
     </section>
-  );
-};
+  )
+}
 
-export default LandingBlog;
+export default LandingBlogDetails

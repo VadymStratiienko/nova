@@ -7,13 +7,15 @@ import About from "./page/About/view";
 import Services from "./page/Services/view";
 import Portfolio from "./page/Portfolio/view";
 import PortfolioDetals from "./page/PortfolioDetals/view";
+import Team from "./page/Team/view";
+import Blog from "./page/Blog/view";
+import BlogDetals from "./page/BlogDetals/view";
 import { ModalProvider } from "styled-react-modal";
 import { Route, Routes } from "react-router-dom";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
-import Team from "./page/Team/view";
-import Blog from "./page/Blog/view";
+
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
         <Route path="/portfolio-detals" element={<PortfolioDetals />} />
         <Route path="team" element={<Team />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="/blog-detals" element={<BlogDetals />} />
       </Routes>
       <Footer />
       <ScrollToTop smooth className="scroll-to-top" color="white" />
