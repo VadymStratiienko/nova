@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import { RootState } from "../../redux/store";
-import { setOpen } from "../../redux/burgerMenuSlice";
 import { NavLink } from "react-router-dom";
+import Sidebar from "../Sidebar/view";
 
 const Head = styled.header<{ isScrolled: boolean }>`
   background: ${({ isScrolled }) => isScrolled && "rgba(27, 47, 69, 0.9)"};
@@ -77,6 +75,7 @@ const StyledBurger = styled.div<{ open: boolean }>`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
+    z-index:9998;
   }
   div {
     width: 28px;
@@ -100,9 +99,7 @@ const StyledBurger = styled.div<{ open: boolean }>`
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const { open } = useSelector((state: RootState) => state.burger);
-  const dispatch = useDispatch();
+ const [open, setOpen] = useState<boolean>(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -119,6 +116,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
 
   let routes = [
     {
@@ -172,14 +170,14 @@ const Header = () => {
           </ul>
         </Navbar>
         <StyledBurger
-          onClick={() => dispatch(setOpen(open))}
-          open={open}
+        open={open} onClick={() => setOpen(!open)}
           style={{ marginLeft: "20px" }}
         >
           <div />
           <div />
           <div />
         </StyledBurger>
+        <Sidebar open={open} setOpen={setOpen} />
       </Container>
     </Head>
   );

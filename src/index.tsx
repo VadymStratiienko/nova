@@ -3,8 +3,6 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { GlobalStyle } from "./styles/global";
-import { store } from "./redux/store";
-import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import "swiper/css/bundle";
 
@@ -13,13 +11,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ParallaxProvider>
-        <GlobalStyle />
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </ParallaxProvider>
-    </Provider>
+    <ParallaxProvider>
+      <GlobalStyle />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ParallaxProvider>
   </React.StrictMode>
 );

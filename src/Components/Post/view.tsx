@@ -329,7 +329,6 @@ const FormGroup = styled.div`
     font-size: 14px;
     display: block;
     width: 100%;
-
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -338,7 +337,6 @@ const FormGroup = styled.div`
     background-clip: padding-box;
     border: 1px solid #ced4da;
     appearance: none;
-    border-radius: 0.375rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 `;
@@ -352,7 +350,6 @@ const FormGroupW = styled.div`
     font-size: 14px;
     display: block;
     width: 100%;
-
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -361,7 +358,6 @@ const FormGroupW = styled.div`
     background-clip: padding-box;
     border: 1px solid #ced4da;
     appearance: none;
-    border-radius: 0.375rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 `;
@@ -386,10 +382,7 @@ const FormArea = styled.div`
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
-    border-radius: 0.375rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 `;

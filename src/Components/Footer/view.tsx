@@ -11,7 +11,7 @@ const ContainerFooter = styled.footer`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  z-index: 99;
+
   font-size: 14px;
   display: flex;
   flex-direction: column;

@@ -9,14 +9,13 @@ import Portfolio from "./page/Portfolio/view";
 import PortfolioDetals from "./page/PortfolioDetals/view";
 import Team from "./page/Team/view";
 import Blog from "./page/Blog/view";
+import Contact from "./page/Contact/view";
 import BlogDetals from "./page/BlogDetals/view";
 import { ModalProvider } from "styled-react-modal";
 import { Route, Routes } from "react-router-dom";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
-
-
 
 function App() {
   useEffect(() => {
@@ -35,6 +34,7 @@ function App() {
         <Route path="team" element={<Team />} />
         <Route path="blog" element={<Blog />} />
         <Route path="/blog-detals" element={<BlogDetals />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
       <Footer />
       <ScrollToTop smooth className="scroll-to-top" color="white" />
