@@ -9,24 +9,9 @@ const Container = styled.div`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  @media (max-width: 1680px) {
-    margin: 0 160px;
-  }
-  @media (max-width: 1590px) {
-    margin: 0 128px;
-  }
-  @media (max-width: 1500px) {
-    margin: 0 100px;
-  }
-  @media (max-width: 1400px) {
-    margin: 0 50px;
-  }
-  @media (max-width: 1380px) {
-    margin: 0 45px;
-  }
-  @media (max-width: 1278px) {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
+  max-width: 1320px;
+  min-width: 350px;
 `;
 const BlockSlider = styled.div`
   display: flex;
@@ -42,21 +27,24 @@ const BlockSlider = styled.div`
 const BgImgDiv = styled.div`
 background-image: url("${BgImg}");
 background-size: cover;
-    height: 570px;
+    max-height: 570px;
     min-height: 500px;
-    width: 540px;
+     max-width: 540px;
+     min-width: 350px;
+     
     @media (max-width:1400px) {
-        height: 653px;
-        width: 465px;
+        max-height: 653px;
+        max-width: 465px;
     }
     @media (max-width:1200px) {
-  width: 936px;
+  max-width: 936px;
   }
   @media (max-width:992px) {
-  width: 696px;
-  height: 500px;
+  max-width: 696px;
+  max-height: 500px;
   }
   @media (max-width:768px) {
+
   width: 516px;
   height: 500px;
   }
@@ -79,7 +67,7 @@ const SectionHeader = styled.h2`
     right: 0;
     bottom: 0;
     margin: auto;
-}
+  }
 `;
 const SectionDiv = styled.div`
   text-align: center;
@@ -89,21 +77,19 @@ const SectionDiv = styled.div`
 const SliderShow = () => {
   return (
     <section>
-    <Container>
-      <SectionDiv>
-        <SectionHeader data-aos="fade-up" data-aos-duration="1000">
-          Why Choose Us
-        </SectionHeader>
-      </SectionDiv>
-      <BlockSlider data-aos="fade-up" data-aos-duration="1000">
-        <BgImgDiv>
-        
-        </BgImgDiv>
-        <div>
-          <SwiperShow />
-        </div>
-      </BlockSlider>
-    </Container>
+      <Container>
+        <SectionDiv>
+          <SectionHeader data-aos="fade-up" data-aos-duration="1000">
+            Why Choose Us
+          </SectionHeader>
+        </SectionDiv>
+        <BlockSlider data-aos="fade-up" data-aos-duration="1000">
+          <BgImgDiv></BgImgDiv>
+          <div>
+            <SwiperShow />
+          </div>
+        </BlockSlider>
+      </Container>
     </section>
   );
 };

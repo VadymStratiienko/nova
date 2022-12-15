@@ -12,10 +12,10 @@ const ContainerFooter = styled.footer`
   margin-right: auto;
   margin-left: auto;
   margin: 0 auto;
-  padding: 0 12px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 `;
 const FooterContent = styled.div`
@@ -26,18 +26,25 @@ const FooterContent = styled.div`
 `;
 const Container = styled.div`
   width: 100%;
+  max-width: 1350px;
+  padding: 0 12px;
+  margin: 0 auto;
   margin-right: auto;
   margin-left: auto;
 `;
 const Row = styled.div`
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  column-gap: 80px;
+  gap: 30px;
+  padding: 0 12px;
 `;
 const FooterInfo = styled.div`
   margin: 24px 0 30px;
-  max-width: 475px;
+
+  @media (min-width: 992px) {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
   p {
     font-size: 15px;
     margin-bottom: 0;

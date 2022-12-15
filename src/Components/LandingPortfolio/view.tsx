@@ -288,7 +288,7 @@ const LandingPortfolio = () => {
                   <Info>
                     <h4>{item.title}</h4>
                     <p>{item.text}</p>
-                    <InfoLink to="/portfolio-detals">
+                    <InfoLink to="/portfolio-details">
                       <BsLink45Deg />
                     </InfoLink>
                   </Info>

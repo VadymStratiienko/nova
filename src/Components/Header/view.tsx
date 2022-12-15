@@ -10,6 +10,7 @@ const Head = styled.header<{ isScrolled: boolean }>`
   z-index: 99;
   transition: all 0.5s;
   width: 100%;
+  margin: 0 auto;
   margin-right: auto;
   margin-left: auto;
 `;
@@ -40,7 +41,7 @@ const Logo = styled.h1`
 `;
 const Navbar = styled.nav`
   padding: 0;
-  li:hover>a  a:hover li:hover{
+  li:hover {
     color: #fff;
   }
 
@@ -66,7 +67,6 @@ const Navbar = styled.nav`
     display: none;
   }
 `;
-
 const StyledBurger = styled.div<{ open: boolean }>`
   width: 28px;
   height: 28px;
@@ -75,7 +75,7 @@ const StyledBurger = styled.div<{ open: boolean }>`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
-    z-index:9998;
+    z-index: 9998;
   }
   div {
     width: 28px;
@@ -99,7 +99,7 @@ const StyledBurger = styled.div<{ open: boolean }>`
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
- const [open, setOpen] = useState<boolean>(false)
+  const [open, setOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,7 +116,6 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   let routes = [
     {
@@ -156,21 +155,25 @@ const Header = () => {
         <Navbar>
           <ul>
             {routes.map((el, index) => {
-              return(
+              return (
                 <li key={index}>
                   <NavLink
-                  style={({isActive}) => ({
-                    textDecoration: "none",
-                    color: isActive ?  'white' :'rgba(255, 255, 255, 0.6)'
-                  })}
-                   to={el.link}>{el.title}</NavLink>
+                    style={({ isActive }) => ({
+                      textDecoration: "none",
+                      color: isActive ? "white" : "rgba(255, 255, 255, 0.6)",
+                    })}
+                    to={el.link}
+                  >
+                    {el.title}
+                  </NavLink>
                 </li>
-              )
+              );
             })}
           </ul>
         </Navbar>
         <StyledBurger
-        open={open} onClick={() => setOpen(!open)}
+          open={open}
+          onClick={() => setOpen(!open)}
           style={{ marginLeft: "20px" }}
         >
           <div />

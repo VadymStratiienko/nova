@@ -49,7 +49,7 @@ const Sidebar = ({ open, setOpen }: ISidebar) => {
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
-    } else if (!open) {
+    } else  {
       document.body.style.overflow = "visible";
     }
   }, [open]);

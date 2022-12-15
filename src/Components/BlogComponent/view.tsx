@@ -217,7 +217,7 @@ const BlogComponent = () => {
                   <img src={item.img} alt="" />
                 </PostImg>
                 <Title>
-                  <Link to="/blog-detals">{item.header}</Link>
+                  <Link to="/blog-details">{item.header}</Link>
                 </Title>
                 <Meta>
                   <ul>
@@ -239,7 +239,7 @@ const BlogComponent = () => {
                   <p>{item.text}</p>
                 </div>
                 <ReadMore>
-                  <LinkMore to="/blog-detals">
+                  <LinkMore to="/blog-details">
                     Read More <BsArrowRight />
                   </LinkMore>
                 </ReadMore>

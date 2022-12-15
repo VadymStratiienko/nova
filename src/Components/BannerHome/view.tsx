@@ -6,6 +6,7 @@ const Container = styled.div`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  margin: 0 auto;
   background: url("${HeroBg}") top center no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -151,9 +152,7 @@ const ButtonStart = styled.a`
 `;
 
 const BannerHome = () => {
-
   return (
-  
     <section>
       <Container>
         <Col>
@@ -169,7 +168,7 @@ const BannerHome = () => {
           </blockquote>
           <BlockBtn data-aos="fade-up" data-aos-duration="1000">
             <ButtonStart>Get Started</ButtonStart>
-           <ModalVideo />
+            <ModalVideo />
           </BlockBtn>
         </Col>
       </Container>

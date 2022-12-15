@@ -1,4 +1,5 @@
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Blog1 from "../../assets/img/blog/blog-1.jpg";
 import Blog2 from "../../assets/img/blog/blog-2.jpg";
@@ -9,6 +10,7 @@ const Container = styled.div`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  margin: 0 auto;
   overflow: hidden;
   padding: 80px 0;
 
@@ -146,12 +148,12 @@ function BlogPost() {
               omnis laudantium. Asperiores eum ipsa est officiis. Modi qui magni
               est...
             </Text>
-            <a href="/">
+            <Link to="//blog-details">
               <span>
                 Read More  
                 <BsArrowRight />
               </span>
-            </a>
+            </Link>
           </PostBox>
         </Post>
 
@@ -169,12 +171,12 @@ function BlogPost() {
               Voluptatem nesciunt omnis libero autem tempora enim ut ipsam id.
               Odit quia ab eum assumenda. Quisquam omnis doloribus...
             </Text>
-            <a href="blog-details.html">
+            <Link to="/blog-details">
               <span>
                 Read More  
                 <BsArrowRight />
               </span>
-            </a>
+            </Link>
           </PostBox>
         </Post>
 
@@ -192,12 +194,12 @@ function BlogPost() {
               Quia nam eaque omnis explicabo similique eum quaerat similique
               laboriosam. Quis omnis repellat sed quae consectetur magnam...
             </Text>
-            <a href="blog-details.html">
+            <Link to="/blog-details">
               <span>
                 Read More  
                 <BsArrowRight />
               </span>
-            </a>
+            </Link>
           </PostBox>
         </Post>
 
@@ -215,12 +217,12 @@ function BlogPost() {
               Et consequatur eveniet nam voluptas commodi cumque ea est ex. Aut
               quis omnis sint ipsum earum quia eligendi...
             </Text>
-            <a href="blog-details.html">
+            <Link to="/blog-details">
               <span>
                 Read More  
                 <BsArrowRight />
               </span>
-            </a>
+            </Link>
           </PostBox>
         </Post>
       </Posts>

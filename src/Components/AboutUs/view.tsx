@@ -8,27 +8,14 @@ const Container = styled.div`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  margin: 0 auto;
+  max-width: 1320px;
 `;
 const Block = styled.div`
   display: flex;
-  margin-right: calc(var(--bs-gutter-x) * 12.2);
-  margin-left: calc(var(--bs-gutter-x) * 12.2);
-
-  @media (max-width: 1400px) {
-    margin-right: calc(var(--bs-gutter-x) * 3.8);
-    margin-left: calc(var(--bs-gutter-x) * 3.8);
-  }
-  @media (max-width: 1200px) {
-    margin-right: calc(var(--bs-gutter-x) * 3);
-    margin-left: calc(var(--bs-gutter-x) * 3);
-  }
-  @media (max-width: 1100px) {
-    margin-right: calc(var(--bs-gutter-x) * 2);
-    margin-left: calc(var(--bs-gutter-x) * 2);
-  }
-  @media (max-width:992px) {
-    display: flex;
-    flex-direction: column;
+  flex-wrap: nowrap;
+  @media (max-width:876px) {
+    flex-wrap: wrap;
   }
 `;
 

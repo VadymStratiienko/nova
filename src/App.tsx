@@ -30,10 +30,10 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="portfolio" element={<Portfolio />} />
-        <Route path="/portfolio-detals" element={<PortfolioDetals />} />
+        <Route path="/portfolio-details" element={<PortfolioDetals />} />
         <Route path="team" element={<Team />} />
         <Route path="blog" element={<Blog />} />
-        <Route path="/blog-detals" element={<BlogDetals />} />
+        <Route path="/blog-details" element={<BlogDetals />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
       <Footer />
