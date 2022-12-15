@@ -1,9 +1,9 @@
-import {useEffect} from "react";
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Navbar = styled.nav`
-display:none;
+  display: none;
   @media (max-width: 1278px) {
     display: flex;
     right: 0;
@@ -16,7 +16,7 @@ display:none;
     z-index: 9997;
     overflow: hidden;
   }
-  @media (max-width:992px) {
+  @media (max-width: 992px) {
     max-width: 100%;
   }
 `;
@@ -46,16 +46,14 @@ interface ISidebar {
 }
 
 const Sidebar = ({ open, setOpen }: ISidebar) => {
-
-    useEffect(() => {
-  if (open) {
-    document.body.style.overflow = "hidden";
-  }
-  else if (!open) {
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else if (!open) {
       document.body.style.overflow = "visible";
-  }
-}, [open]);
-    
+    }
+  }, [open]);
+
   let routes = [
     {
       title: "Home",
@@ -88,18 +86,18 @@ const Sidebar = ({ open, setOpen }: ISidebar) => {
   ];
 
   return (
-    <Navbar className="navbar">
+    <Navbar data-aos="fade-up" data-aos-duration="1000">
       <Ul open={open}>
         {routes.map((el, index) => {
           return (
-            <li key={index} >
+            <li key={index}>
               <NavLink
                 style={({ isActive }) => ({
                   textDecoration: "none",
                   color: isActive ? "white" : "rgba(255, 255, 255, 0.6)",
                 })}
                 to={el.link}
-             onClick={() => setOpen(!open)}
+                onClick={() => setOpen(!open)}
               >
                 {el.title}
               </NavLink>

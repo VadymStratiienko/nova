@@ -158,7 +158,7 @@ const Testimonials = () => {
   return (
     <section>
       <Container>
-        <SectionHeader>
+        <SectionHeader data-aos="fade-up" data-aos-duration="1000">
           <h2>Testimonials</h2>
         </SectionHeader>
         <>
@@ -177,7 +177,7 @@ const Testimonials = () => {
             modules={[Autoplay, Pagination]}
             className="mySwiper2"
           >
-            <SwiperSlide>
+            <SwiperSlide data-aos="fade-up" data-aos-duration="1000">
               <Item>
                 <div>
                   <Star />
@@ -199,7 +199,7 @@ const Testimonials = () => {
                 </Info>
               </Item>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide data-aos="fade-up" data-aos-duration="1000">
               <Item>
                 <div>
                   <Star />
@@ -221,7 +221,7 @@ const Testimonials = () => {
                 </Info>
               </Item>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide data-aos="fade-up" data-aos-duration="1000">
               <Item>
                 <div>
                   <Star />
@@ -242,7 +242,7 @@ const Testimonials = () => {
                 </Info>
               </Item>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide data-aos="fade-up" data-aos-duration="1000">
               <Item>
                 <div>
                   <Star />
@@ -264,7 +264,7 @@ const Testimonials = () => {
                 </Info>
               </Item>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide data-aos="fade-up" data-aos-duration="1000">
               <Item>
                 <div>
                   <Star />

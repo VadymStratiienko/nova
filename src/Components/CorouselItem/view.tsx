@@ -59,7 +59,7 @@ flex-wrap: wrap;
 
 function CorouselItem() {
   return (
-    <Container>
+    <Container data-aos="fade-up" data-aos-duration="1000">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

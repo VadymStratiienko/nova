@@ -67,7 +67,7 @@ const BannerPortfolioDetals = () => {
     <section>
       {" "}
       <Container>
-        <Block>
+        <Block data-aos="fade-up" data-aos-duration="1000">
           <h2>Portfolio Detals</h2>
           <ol>
             <li>

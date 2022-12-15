@@ -135,10 +135,10 @@ const TeamComponent = () => {
     <section>
       <Container>
         <TeamContainer>
-          <SectionHeader>
+          <SectionHeader data-aos="fade-up" data-aos-duration="1000">
             <h2>Our Team</h2>
           </SectionHeader>
-          <WrapperBlocks>
+          <WrapperBlocks data-aos="fade-up" data-aos-duration="1000">
             <Block>
               <BlockImg>
                 <img src={Team1} alt="" />
@@ -157,13 +157,13 @@ const TeamComponent = () => {
                   </Link>
                 </Social>
               </BlockImg>
-              <Info>
+              <Info data-aos="fade-up" data-aos-duration="1000">
                 <h4>Walter White</h4>
                 <span>Chief Excutive Officer</span>
               </Info>
             </Block>
             <Block>
-              <BlockImg>
+              <BlockImg data-aos="fade-up" data-aos-duration="1000">
                 <img src={Team2} alt="" />
                 <Social>
                   <Link to="https://twitter.com/">
@@ -180,13 +180,13 @@ const TeamComponent = () => {
                   </Link>
                 </Social>
               </BlockImg>
-              <Info>
+              <Info data-aos="fade-up" data-aos-duration="1000">
                 <h4>Sara Jhonson</h4>
                 <span>Product Manager</span>
               </Info>
             </Block>
             <Block>
-              <BlockImg>
+              <BlockImg data-aos="fade-up" data-aos-duration="1000">
                 <img src={Team3} alt="" />
                 <Social>
                   <Link to="https://twitter.com/">
@@ -209,7 +209,7 @@ const TeamComponent = () => {
               </Info>
             </Block>
             <Block>
-              <BlockImg>
+              <BlockImg data-aos="fade-up" data-aos-duration="1000">
                 <img src={Team4} alt="" />
                 <Social>
                   <Link to="https://twitter.com/">
@@ -226,7 +226,7 @@ const TeamComponent = () => {
                   </Link>
                 </Social>
               </BlockImg>
-              <Info>
+              <Info data-aos="fade-up" data-aos-duration="1000">
                 <h4>Amanda Jepson</h4>
                 <span>Accountant</span>
               </Info>

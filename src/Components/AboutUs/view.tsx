@@ -86,7 +86,7 @@ const Check = styled(BsCheckCircleFill)`
 const AboutUs = () => {
   return (
     <section>
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="1000">
         <Block>
           <BlockImg>
             <img src={About} alt="" />

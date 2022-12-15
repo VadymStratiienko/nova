@@ -209,7 +209,7 @@ const ArrayBlog: IBlog[] = [
 const BlogComponent = () => {
   return (
     <>
-            <PostsWrapper>
+            <PostsWrapper data-aos="fade-up" data-aos-duration="1000">
           {ArrayBlog.map((item, index) => {
             return (
               <Post key={index}>
@@ -246,7 +246,7 @@ const BlogComponent = () => {
               </Post>
             );
           })}
-          <BlogPagination>
+          <BlogPagination data-aos="fade-up" data-aos-duration="1000">
             <ul>
               <li>
                 <Link to="">1</Link>

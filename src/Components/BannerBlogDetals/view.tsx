@@ -68,7 +68,7 @@ const BannerBlogDetals = () => {
   return (
     <section>
     <Container>
-      <Block>
+      <Block data-aos="fade-up" data-aos-duration="1000">
         <h2>Blog Details</h2>
         <ol>
           <li>

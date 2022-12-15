@@ -19,7 +19,7 @@ const Container = styled.div`
 const LandingBlog = () => {
   return (
     <section>
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="1000">
         <BlogComponent />
        <BarComponent />
       </Container>

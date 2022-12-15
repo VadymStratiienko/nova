@@ -11,12 +11,12 @@ const ContainerFooter = styled.footer`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-
+  margin: 0 auto;
+  padding: 0 12px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 `;
 const FooterContent = styled.div`
   background-color: #f7f9fc;

@@ -17,7 +17,7 @@ overflow: hidden;
 const LandingServices = () => {
   return (
     <section>
-        <Container>
+        <Container data-aos="fade-up" data-aos-duration="1000">
             <Table />
             <ServicesCards />
             <Testimonials />

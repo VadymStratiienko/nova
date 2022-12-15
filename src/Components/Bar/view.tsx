@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
-import styled from 'styled-components';
+import styled from "styled-components";
 import Recent1 from "../../assets/img/blog/blog-recent-1.jpg";
 import Recent2 from "../../assets/img/blog/blog-recent-1.jpg";
 import Recent3 from "../../assets/img/blog/blog-recent-1.jpg";
@@ -186,107 +186,110 @@ const ArrayRecent: IRecent[] = [
 
 const BarComponent = () => {
   return (
-    <> <Bar>
-    <SearchForm>
-      <h3>Search</h3>
-      <form action="">
-        <input type="text" />
-        <button type="submit">
-          <BsSearch />
-        </button>
-      </form>
-    </SearchForm>
-    <Categories>
-      <h3>Categories</h3>
-      <ul>
-        <li>
-          <Link to="">
-            General<span>(25)</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            Lifestyle<span>(12)</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            Travel<span>(5)</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            Design<span>(22)</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            Creative<span>(8)</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            Eduaction<span>(14)</span>
-          </Link>
-        </li>
-      </ul>
-    </Categories>
-    <RecentPostsWrapper>
-      <h3>Recent Posts</h3>
-      {ArrayRecent.map((item, index) => {
-        return (
-          <RecentPost key={index}>
-            <img src={item.img} alt="" />
-            <div>
-              <h4>
-                <Link to="">{item.header}</Link>
-              </h4>
-              <time>{item.time}</time>
-            </div>
-          </RecentPost>
-        );
-      })}
-    </RecentPostsWrapper>
-    <Tags>
-      <h3>Tags</h3>
-      <ul>
-        <li>
-          <Link to="">App</Link>
-        </li>
-        <li>
-          <Link to="">IT</Link>
-        </li>
-        <li>
-          <Link to="">Business</Link>
-        </li>
-        <li>
-          <Link to="">Mac</Link>
-        </li>
-        <li>
-          <Link to="">Design</Link>
-        </li>
-        <li>
-          <Link to="">Office</Link>
-        </li>
-        <li>
-          <Link to="">Creative</Link>
-        </li>
-        <li>
-          <Link to="">Studio</Link>
-        </li>
-        <li>
-          <Link to="">Smart</Link>
-        </li>
-        <li>
-          <Link to="">Tips</Link>
-        </li>
-        <li>
-          <Link to="">Marketing</Link>
-        </li>
-      </ul>
-    </Tags>
-  </Bar></>
-  )
-}
+    <>
+      {" "}
+      <Bar data-aos="fade-up" data-aos-duration="1000">
+        <SearchForm>
+          <h3>Search</h3>
+          <form action="">
+            <input type="text" />
+            <button type="submit">
+              <BsSearch />
+            </button>
+          </form>
+        </SearchForm>
+        <Categories>
+          <h3>Categories</h3>
+          <ul>
+            <li>
+              <Link to="">
+                General<span>(25)</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="">
+                Lifestyle<span>(12)</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="">
+                Travel<span>(5)</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="">
+                Design<span>(22)</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="">
+                Creative<span>(8)</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="">
+                Eduaction<span>(14)</span>
+              </Link>
+            </li>
+          </ul>
+        </Categories>
+        <RecentPostsWrapper data-aos="fade-up" data-aos-duration="1000">
+          <h3>Recent Posts</h3>
+          {ArrayRecent.map((item, index) => {
+            return (
+              <RecentPost key={index}>
+                <img src={item.img} alt="" />
+                <div>
+                  <h4>
+                    <Link to="">{item.header}</Link>
+                  </h4>
+                  <time>{item.time}</time>
+                </div>
+              </RecentPost>
+            );
+          })}
+        </RecentPostsWrapper>
+        <Tags data-aos="fade-up" data-aos-duration="1000">
+          <h3>Tags</h3>
+          <ul>
+            <li>
+              <Link to="">App</Link>
+            </li>
+            <li>
+              <Link to="">IT</Link>
+            </li>
+            <li>
+              <Link to="">Business</Link>
+            </li>
+            <li>
+              <Link to="">Mac</Link>
+            </li>
+            <li>
+              <Link to="">Design</Link>
+            </li>
+            <li>
+              <Link to="">Office</Link>
+            </li>
+            <li>
+              <Link to="">Creative</Link>
+            </li>
+            <li>
+              <Link to="">Studio</Link>
+            </li>
+            <li>
+              <Link to="">Smart</Link>
+            </li>
+            <li>
+              <Link to="">Tips</Link>
+            </li>
+            <li>
+              <Link to="">Marketing</Link>
+            </li>
+          </ul>
+        </Tags>
+      </Bar>
+    </>
+  );
+};
 
-export default BarComponent
+export default BarComponent;

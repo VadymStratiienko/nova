@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import TeamHeader from "../../assets/img/team-header.jpg"
+import TeamHeader from "../../assets/img/team-header.jpg";
 
 const Container = styled.div`
    width: 100%;
@@ -62,7 +62,7 @@ const BannerTeam = () => {
   return (
     <section>
       <Container>
-        <Block>
+        <Block data-aos="fade-up" data-aos-duration="1000">
           <h2>Team</h2>
           <ol>
             <li>

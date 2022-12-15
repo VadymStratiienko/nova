@@ -76,7 +76,7 @@ const PortfolioDescription = styled.div`
 const ProductItem = () => {
   return (
     <section>
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="1000">
         <ContainerCorousel>
           <CorouselItem />
         </ContainerCorousel>

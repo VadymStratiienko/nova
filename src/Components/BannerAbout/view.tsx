@@ -22,7 +22,7 @@ const Container = styled.div`
 `;
 const Block = styled.div`
   padding: 0 12px;
-  
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -53,25 +53,25 @@ const Block = styled.div`
   }
 `;
 const ALink = styled(Link)`
-text-decoration: none;
-color: rgba(255, 255, 255, 0.8);
-    transition: 0.3s;
-    :hover {
-      text-decoration: underline;
-    }
-`
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+  :hover {
+    text-decoration: underline;
+  }
+`;
 
 const BannerAbout = () => {
   return (
     <section>
       <Container>
-        <Block>
+        <Block data-aos="fade-up" data-aos-duration="1000">
           <h2>About</h2>
           <ol>
             <li>
               <ALink to="/">Home</ALink>
-            </li> 
-            <li>About</li>
+            </li>
+             <li>About</li>
           </ol>
         </Block>
       </Container>

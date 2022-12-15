@@ -397,8 +397,8 @@ const Button = styled.button`
 
 const PostDetails = () => {
   return (
-    <Container>
-      <Post>
+    <Container data-aos="fade-up" data-aos-duration="1000">
+      <Post data-aos="fade-up" data-aos-duration="1000">
         <PostImg>
           <img src={Blog} alt="" />
         </PostImg>
@@ -406,7 +406,7 @@ const PostDetails = () => {
           Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam
           quia
         </h2>
-        <Meta>
+        <Meta data-aos="fade-up" data-aos-duration="1000">
           <ul>
             <li>
               <Person />
@@ -422,7 +422,7 @@ const PostDetails = () => {
             </li>
           </ul>
         </Meta>
-        <Content>
+        <Content data-aos="fade-up" data-aos-duration="1000">
           <p>
             Similique neque nam consequuntur ad non maxime aliquam quas.
             Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum
@@ -486,7 +486,7 @@ const PostDetails = () => {
             asperiores est veniam.
           </p>
         </Content>
-        <MetaBottom>
+        <MetaBottom data-aos="fade-up" data-aos-duration="1000">
           <Folder />
            
           <Cats>
@@ -531,7 +531,7 @@ const PostDetails = () => {
           </p>
         </div>
       </PostAuthor>
-      <Comments>
+      <Comments data-aos="fade-up" data-aos-duration="1000">
         <h4>8 Comments</h4>
         <Comment>
           <Block>
@@ -556,7 +556,7 @@ const PostDetails = () => {
             </div>
           </Block>
         </Comment>
-        <Comment>
+        <Comment data-aos="fade-up" data-aos-duration="1000">
           <Block>
             <CommentImg>
               <img src={Comments2} alt="" />
@@ -631,7 +631,7 @@ const PostDetails = () => {
             </CommentReply>
           </CommentReply>
         </Comment>
-        <Comment>
+        <Comment data-aos="fade-up" data-aos-duration="1000">
           <Block>
             <CommentImg>
               <img src={Comments5} alt="" />
@@ -657,7 +657,7 @@ const PostDetails = () => {
             </div>
           </Block>
         </Comment>
-        <Comment>
+        <Comment data-aos="fade-up" data-aos-duration="1000"> 
           <Block>
             <CommentImg>
               <img src={Comments6} alt="" />
@@ -686,7 +686,7 @@ const PostDetails = () => {
           Your email address will not be published. Required fields are marked *
         </p>
         <form action="">
-          <FormBox>
+          <FormBox data-aos="fade-up" data-aos-duration="1000">
             <FormGroup>
               <input type="text" placeholder="Your Name*" />
             </FormGroup>

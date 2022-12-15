@@ -21,12 +21,15 @@ const Container = styled.div`
   margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
-  max-width:1440px;
+  max-width: 1440px;
 `;
 const Tabs = styled.ul`
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  .active-tabs {
+    color: var(--color-primary);
+  }
 
   li {
     color: var(--color-secondary);
@@ -39,11 +42,10 @@ const Tabs = styled.ul`
     line-height: 1;
     margin-bottom: 5px;
     transition: all 0.3s ease-in-out;
-
     :hover {
       color: var(--color-primary);
     }
- 
+
     :first-child {
       margin-left: 0;
     }
@@ -102,16 +104,16 @@ const InfoLink = styled(Link)`
   right: 14px;
   font-size: 28px;
   position: absolute;
-    right: 20px;
-    font-size: 24px;
-    top: calc(50% - 14px);
-    color: rgba(27, 47, 69, 0.7);
-    transition: 0.3s;
-    line-height: 0;
-    
-    :hover {
-      color: var(--color-primary);
-    }
+  right: 20px;
+  font-size: 24px;
+  top: calc(50% - 14px);
+  color: rgba(27, 47, 69, 0.7);
+  transition: 0.3s;
+  line-height: 0;
+
+  :hover {
+    color: var(--color-primary);
+  }
 `;
 
 interface IProduct {
@@ -211,41 +213,76 @@ const Products: IProduct[] = [
 
 const LandingPortfolio = () => {
   const [filtered, setFiltered] = useState(Products);
+  const [toggleState, setToggleState] = useState(1);
+
+  const toggleTab = (index: number) => {
+    setToggleState(index);
+  };
 
   function filterCategories(category: string) {
     if (category === "All") {
       setFiltered(Products);
+      toggleTab(1);
     } else if (category === "App") {
       let App = [...Products].filter((item) => item.category === "App");
       setFiltered(App);
+      toggleTab(2);
     } else if (category === "Books") {
       let Books = [...Products].filter((item) => item.category === "Books");
       setFiltered(Books);
+      toggleTab(3);
     } else if (category === "Branding") {
       let Branding = [...Products].filter(
         (item) => item.category === "Branding"
       );
       setFiltered(Branding);
+      toggleTab(4);
     } else if (category === "Product") {
       let Product = [...Products].filter((item) => item.category === "Product");
       setFiltered(Product);
+      toggleTab(5);
     }
   }
 
   return (
     <section>
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="1000">
         <Tabs>
-          <li onClick={() => filterCategories("All")}>All</li>
-          <li onClick={() => filterCategories("App")}>App</li>
-          <li onClick={() => filterCategories("Books")}>Books</li>
-          <li onClick={() => filterCategories("Branding")}>Branding</li>
-          <li onClick={() => filterCategories("Product")}>Product</li>
+          <li
+            className={toggleState === 1 ? " active-tabs" : ""}
+            onClick={() => filterCategories("All")}
+          >
+            All
+          </li>
+          <li
+            className={toggleState === 2 ? "active-tabs" : ""}
+            onClick={() => filterCategories("App")}
+          >
+            App
+          </li>
+          <li
+            className={toggleState === 3 ? "active-tabs" : ""}
+            onClick={() => filterCategories("Books")}
+          >
+            Books
+          </li>
+          <li
+            className={toggleState === 4 ? "active-tabs" : ""}
+            onClick={() => filterCategories("Branding")}
+          >
+            Branding
+          </li>
+          <li
+            className={toggleState === 5 ? "active-tabs" : ""}
+            onClick={() => filterCategories("Product")}
+          >
+            Product
+          </li>
         </Tabs>
-        <ProductsWrapper>
+        <ProductsWrapper data-aos="fade-up" data-aos-duration="1000">
           {filtered.map((item, id) => {
             return (
-              <Product key={id}>
+              <Product key={id}  data-aos="zoom-out-down">
                 <div>
                   <img src={item.img} alt="" />
                   <Info>

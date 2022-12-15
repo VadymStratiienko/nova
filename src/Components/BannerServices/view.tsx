@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import ServicesHeader from "../../assets/img/services-header.jpg"
+import ServicesHeader from "../../assets/img/services-header.jpg";
 
-
-const Container  = styled.div`
+const Container = styled.div`
    width: 100%;
    background-image:url("${ServicesHeader}") ;
    padding: 140px 0 60px ;
@@ -21,7 +20,7 @@ const Container  = styled.div`
 `;
 const Block = styled.div`
   padding: 0 12px;
-  
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -52,31 +51,30 @@ const Block = styled.div`
   }
 `;
 const SLink = styled(Link)`
-text-decoration: none;
-color: rgba(255, 255, 255, 0.8);
-    transition: 0.3s;
-    :hover {
-      text-decoration: underline;
-    }
-`
-
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+  :hover {
+    text-decoration: underline;
+  }
+`;
 
 const BannerServices = () => {
   return (
     <section>
-        <Container>
-        <Block>
+      <Container>
+        <Block data-aos="fade-up" data-aos-duration="1000">
           <h2>Services</h2>
           <ol>
             <li>
               <SLink to="/">Home</SLink>
-            </li> 
-            <li>Services</li>
+            </li>
+             <li>Services</li>
           </ol>
         </Block>
-        </Container>
+      </Container>
     </section>
-  )
-}
+  );
+};
 
-export default BannerServices
+export default BannerServices;
