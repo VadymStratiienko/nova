@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import BarComponent from "../Bar/view";
-import BlogComponent from "../BlogComponent/view";
+import styled from 'styled-components';
+import BarComponent from '../Bar/view';
+import BlogComponent from '../BlogComponent/view';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -9,7 +9,7 @@ const Container = styled.div`
   overflow: hidden;
   padding: 80px 0;
   display: flex;
-  
+
   max-width: 1344px;
   @media (max-width: 1350px) {
     flex-wrap: wrap;
@@ -19,9 +19,9 @@ const Container = styled.div`
 const LandingBlog = () => {
   return (
     <section>
-      <Container data-aos="fade-up" data-aos-duration="1000">
+      <Container data-aos='fade-up' data-aos-duration='1000'>
         <BlogComponent />
-       <BarComponent />
+        <BarComponent />
       </Container>
     </section>
   );

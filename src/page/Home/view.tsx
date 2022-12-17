@@ -1,5 +1,5 @@
-import BannerHome from "../../Components/BannerHome/view";
-import Landing from "../../Components/LandingHome/view";
+import BannerHome from '../../Components/BannerHome/view';
+import Landing from '../../Components/LandingHome/view';
 
 function Home() {
   return (

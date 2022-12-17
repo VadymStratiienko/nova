@@ -1,6 +1,6 @@
-import { BsCheckCircleFill } from "react-icons/bs";
-import styled from "styled-components";
-import About from "../../assets/img/about.jpg";
+import { BsCheckCircleFill } from 'react-icons/bs';
+import styled from 'styled-components';
+import About from '../../assets/img/about.jpg';
 
 const Container = styled.div`
   overflow: hidden;
@@ -14,7 +14,7 @@ const Container = styled.div`
 const Block = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  @media (max-width:876px) {
+  @media (max-width: 876px) {
     flex-wrap: wrap;
   }
 `;
@@ -58,8 +58,8 @@ const Content = styled.div`
       font-weight: 600;
     }
   }
-  @media (max-width:992px) {
-      padding: 0;
+  @media (max-width: 992px) {
+    padding: 0;
   }
 `;
 const Check = styled(BsCheckCircleFill)`
@@ -73,19 +73,18 @@ const Check = styled(BsCheckCircleFill)`
 const AboutUs = () => {
   return (
     <section>
-      <Container data-aos="fade-up" data-aos-duration="1000">
+      <Container data-aos='fade-up' data-aos-duration='1000'>
         <Block>
           <BlockImg>
-            <img src={About} alt="" />
+            <img src={About} alt='' />
           </BlockImg>
           <Col>
             <Content>
               <h3>Voluptatem dignissimos provident quasi</h3>
               <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident
               </p>
               <ul>
                 <li>

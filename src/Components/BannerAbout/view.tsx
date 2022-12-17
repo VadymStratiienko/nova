@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import AboutHeader from "../../assets/img/about-header.jpg";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import AboutHeader from '../../assets/img/about-header.jpg';
 
 const Container = styled.div`
   width: 100%;
@@ -9,12 +9,12 @@ const Container = styled.div`
   padding: 140px 0 60px 0;
   min-height: 30vh;
   position: relative;
-  background-image: url("${AboutHeader}") ;
+  background-image: url('${AboutHeader}');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  ::before{
-    content: "";
+  ::before {
+    content: '';
     background-color: rgba(27, 47, 69, 0.7);
     position: absolute;
     inset: 0;
@@ -49,7 +49,7 @@ const Block = styled.div`
     display: inline-block;
     padding-right: 10px;
     color: #fff;
-    content: "/";
+    content: '/';
   }
 `;
 const ALink = styled(Link)`
@@ -65,11 +65,11 @@ const BannerAbout = () => {
   return (
     <section>
       <Container>
-        <Block data-aos="fade-up" data-aos-duration="1000">
+        <Block data-aos='fade-up' data-aos-duration='1000'>
           <h2>About</h2>
           <ol>
             <li>
-              <ALink to="/">Home</ALink>
+              <ALink to='/'>Home</ALink>
             </li>
              <li>About</li>
           </ol>

@@ -58,6 +58,7 @@
     "@types/aos": "^3.0.4",
     "@types/react-swipeable-views": "^0.13.1",
     "@types/react-swipeable-views-utils": "^0.13.4",
-    "@types/styled-react-modal": "^1.2.2"
+    "@types/styled-react-modal": "^1.2.2",
+    "prettier": "2.8.1"
   }
 }

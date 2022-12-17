@@ -1,11 +1,5 @@
-import {
-  BsDash,
-  BsFacebook,
-  BsInstagram,
-  BsLinkedin,
-  BsTwitter,
-} from "react-icons/bs";
-import styled from "styled-components";
+import { BsDash, BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs';
+import styled from 'styled-components';
 
 const ContainerFooter = styled.footer`
   width: 100%;
@@ -130,28 +124,27 @@ function Footer() {
         <Container>
           <Row>
             <FooterInfo>
-              <LinkLogo href="/">
+              <LinkLogo href='/'>
                 <Logo>Nova</Logo>
               </LinkLogo>
               <p>
-                Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
-                nada terra videa magna derita valies darta donna mare fermentum
-                iaculis eu non diam phasellus.
+                Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa
+                magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.
               </p>
               <BlockIcons>
-                <a href="https://twitter.com/">
+                <a href='https://twitter.com/'>
                   <BsTwitter />
                 </a>
-                <a href="https://www.facebook.com/">
+                <a href='https://www.facebook.com/'>
                   <BsFacebook />
                 </a>
                 <a
-                  href="https://www.instagram.com
-"
+                  href='https://www.instagram.com
+'
                 >
                   <BsInstagram />
                 </a>
-                <a href="https://www.linkedin.com/">
+                <a href='https://www.linkedin.com/'>
                   <BsLinkedin />
                 </a>
               </BlockIcons>
@@ -161,20 +154,20 @@ function Footer() {
               <h4>Useful Links</h4>
               <ul>
                 <li>
-                  <BsDash /> <a href="/">Home</a>
+                  <BsDash /> <a href='/'>Home</a>
                 </li>
                 <li>
-                  <BsDash /> <a href="/">About us</a>
+                  <BsDash /> <a href='/'>About us</a>
                 </li>
                 <li>
-                  <BsDash /> <a href="/">Services</a>
+                  <BsDash /> <a href='/'>Services</a>
                 </li>
                 <li>
                   <BsDash />
-                  <a href="/">Terms of service</a>
+                  <a href='/'>Terms of service</a>
                 </li>
                 <li>
-                  <BsDash /> <a href="/">Privacy policy</a>
+                  <BsDash /> <a href='/'>Privacy policy</a>
                 </li>
               </ul>
             </FooterLinks>
@@ -183,19 +176,19 @@ function Footer() {
               <h4>Our Services</h4>
               <ul>
                 <li>
-                  <BsDash /> <a href="/">Web Design</a>
+                  <BsDash /> <a href='/'>Web Design</a>
                 </li>
                 <li>
-                  <BsDash /> <a href="/">Web Development</a>
+                  <BsDash /> <a href='/'>Web Development</a>
                 </li>
                 <li>
-                  <BsDash /> <a href="/">Product Management</a>
+                  <BsDash /> <a href='/'>Product Management</a>
                 </li>
                 <li>
-                  <BsDash /> <a href="/">Marketing</a>
+                  <BsDash /> <a href='/'>Marketing</a>
                 </li>
                 <li>
-                  <BsDash /> <a href="/">Graphic Design</a>
+                  <BsDash /> <a href='/'>Graphic Design</a>
                 </li>
               </ul>
             </FooterLinks>
@@ -221,7 +214,7 @@ function Footer() {
       <FooterBy>
         <div>
           <div>
-            &copy; Copyright{" "}
+            &copy; Copyright{' '}
             <strong>
               <span>Nova</span>
             </strong>

@@ -1,5 +1,5 @@
-import BannerServices from '../../Components/BannerServices/view'
-import LandingServices from '../../Components/LandingServices/view'
+import BannerServices from '../../Components/BannerServices/view';
+import LandingServices from '../../Components/LandingServices/view';
 
 const Services = () => {
   return (
@@ -7,7 +7,7 @@ const Services = () => {
       <BannerServices />
       <LandingServices />
     </main>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

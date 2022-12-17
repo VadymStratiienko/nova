@@ -1,15 +1,13 @@
-import BannerTeam from "../../Components/BannerTeam/view"
-import TeamComponent from "../../Components/TeamComponent/view"
-
-
+import BannerTeam from '../../Components/BannerTeam/view';
+import TeamComponent from '../../Components/TeamComponent/view';
 
 const Team = () => {
   return (
     <main>
-        <BannerTeam />
+      <BannerTeam />
       <TeamComponent />
     </main>
-  )
-}
+  );
+};
 
-export default Team
+export default Team;

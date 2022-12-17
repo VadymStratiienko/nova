@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import HeroBg from "../../assets/img/hero-bg.jpg";
-import ModalVideo from "../Modal/view";
+import styled from 'styled-components';
+import HeroBg from '../../assets/img/hero-bg.jpg';
+import ModalVideo from '../Modal/view';
 
 const Container = styled.div`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   margin: 0 auto;
-  background: url("${HeroBg}") top center no-repeat;
+  background: url('${HeroBg}') top center no-repeat;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
@@ -21,7 +21,7 @@ const Container = styled.div`
 
   ::after {
     position: absolute;
-    content: "";
+    content: '';
     width: 40%;
     background: var(--color-secondary);
     top: 0;
@@ -29,31 +29,28 @@ const Container = styled.div`
   }
   ::before {
     position: absolute;
-    content: "";
+    content: '';
     background: rgba(27, 47, 69, 0.6);
     inset: 0;
   }
   @media (max-width: 1034px) {
-  ::after {
-    position: absolute;
-    content: normal;
-    width: 40%;
-    background: var(--color-secondary);
-    top: 0;
-    bottom: 0;
+    ::after {
+      position: absolute;
+      content: normal;
+      width: 40%;
+      background: var(--color-secondary);
+      top: 0;
+      bottom: 0;
+    }
   }
-}
   @media (max-width: 1034px) {
-  ::before {
-    background: rgba(27, 47, 69, 0.7);
-   
+    ::before {
+      background: rgba(27, 47, 69, 0.7);
+    }
   }
-}
-@media (min-width: 1365px) {
-  
+  @media (min-width: 1365px) {
     background-attachment: fixed;
-}
-  
+  }
 `;
 const Col = styled.div`
   flex-shrink: 1;
@@ -156,17 +153,17 @@ const BannerHome = () => {
     <section>
       <Container>
         <Col>
-          <h2 data-aos="fade-up" data-aos-duration="1000">
+          <h2 data-aos='fade-up' data-aos-duration='1000'>
             Focus On What Matters
           </h2>
-          <blockquote data-aos="fade-up" data-aos-duration="1000">
+          <blockquote data-aos='fade-up' data-aos-duration='1000'>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Perspiciatis cum recusandae eum laboriosam voluptatem repudiandae
-              odio, vel exercitationem officiis provident minima.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis cum recusandae
+              eum laboriosam voluptatem repudiandae odio, vel exercitationem officiis provident
+              minima.
             </p>
           </blockquote>
-          <BlockBtn data-aos="fade-up" data-aos-duration="1000">
+          <BlockBtn data-aos='fade-up' data-aos-duration='1000'>
             <ButtonStart>Get Started</ButtonStart>
             <ModalVideo />
           </BlockBtn>

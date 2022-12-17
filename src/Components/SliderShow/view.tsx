@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import BgImg from "../../assets/img/why-us-bg.jpg";
-import SwiperShow from "../SwiperShow/view";
+import styled from 'styled-components';
+import BgImg from '../../assets/img/why-us-bg.jpg';
+import SwiperShow from '../SwiperShow/view';
 
 const Container = styled.div`
   padding-bottom: 0;
@@ -46,7 +46,7 @@ const BgImgDiv = styled.div`
     }
     @media (max-width: 765px) {
       object-fit: contain;
-  }
+    }
   }
 
   @media (max-width: 1320px) {
@@ -54,7 +54,7 @@ const BgImgDiv = styled.div`
     width: 100%;
     min-width: 350px;
   }
-  @media (max-width:992px) {
+  @media (max-width: 992px) {
     max-width: 696px;
   }
   @media (max-width: 765px) {
@@ -75,7 +75,7 @@ const SectionHeader = styled.h2`
   padding-bottom: 20px;
   position: relative;
   ::after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 60px;
@@ -97,13 +97,13 @@ const SliderShow = () => {
     <section>
       <Container>
         <SectionDiv>
-          <SectionHeader data-aos="fade-up" data-aos-duration="1000">
+          <SectionHeader data-aos='fade-up' data-aos-duration='1000'>
             Why Choose Us
           </SectionHeader>
         </SectionDiv>
-        <BlockSlider data-aos="fade-up" data-aos-duration="1000">
+        <BlockSlider data-aos='fade-up' data-aos-duration='1000'>
           <BgImgDiv>
-            <img src={BgImg} alt="" />
+            <img src={BgImg} alt='' />
           </BgImgDiv>
           <div>
             <SwiperShow />

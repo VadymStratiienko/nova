@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 import AboutUs from '../AboutUs/view';
 import CallToAction from '../CallToAction/view';
@@ -18,14 +18,14 @@ const Container = styled.div`
 const LandingAbout = () => {
   return (
     <section>
-      <Container data-aos="fade-up" data-aos-duration="1000">
+      <Container data-aos='fade-up' data-aos-duration='1000'>
         <AboutUs />
         <SliderShow />
         <CallToAction />
         <TeamComponent />
       </Container>
     </section>
-  )
-}
+  );
+};
 
 export default LandingAbout;

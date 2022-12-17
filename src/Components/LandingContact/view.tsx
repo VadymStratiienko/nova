@@ -1,11 +1,11 @@
-import { BsEnvelope, BsGeoAlt, BsPhone } from "react-icons/bs";
-import styled from "styled-components";
-import ContactBg from "../../assets/img/contact-bg.png";
+import { BsEnvelope, BsGeoAlt, BsPhone } from 'react-icons/bs';
+import styled from 'styled-components';
+import ContactBg from '../../assets/img/contact-bg.png';
 
 const Container = styled.div`
   overflow: hidden;
   padding: 80px 0;
-  background-image: url("${ContactBg}");
+  background-image: url('${ContactBg}');
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain;
@@ -14,7 +14,7 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   ::before {
-    content: "";
+    content: '';
     background: rgba(255, 255, 255, 0.7);
     position: absolute;
     bottom: 0;
@@ -22,7 +22,7 @@ const Container = styled.div`
     left: 0;
     right: 0;
   }
-  @media(min-width: 1400px) {
+  @media (min-width: 1400px) {
     max-width: 1320px;
   }
 `;
@@ -170,7 +170,7 @@ const BlockButton = styled.div`
     color: #fff;
     transition: 0.4s;
     cursor: pointer;
-        margin: 0;
+    margin: 0;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
@@ -180,7 +180,7 @@ const BlockButton = styled.div`
 const LandingContact = () => {
   return (
     <section>
-      <Container data-aos="fade-up" data-aos-duration="1000">
+      <Container data-aos='fade-up' data-aos-duration='1000'>
         <ContactWrapper>
           <InfoBlock>
             <InfoItem>
@@ -192,7 +192,7 @@ const LandingContact = () => {
                 <p>A108 Adam Street, New York, NY 535022</p>
               </div>
             </InfoItem>
-            <InfoItem className="info-item">
+            <InfoItem className='info-item'>
               <BlockIcon>
                 <Envelope />
               </BlockIcon>
@@ -201,7 +201,7 @@ const LandingContact = () => {
                 <p>info@example.com</p>
               </div>
             </InfoItem>
-            <InfoItem className="info-item">
+            <InfoItem className='info-item'>
               <BlockIcon>
                 <Phone />
               </BlockIcon>
@@ -212,27 +212,23 @@ const LandingContact = () => {
             </InfoItem>
           </InfoBlock>
           <FormBlock>
-            <form action="">
+            <form action=''>
               <Block>
                 <FormGroup>
-                  <input type="text" placeholder="Your Name"/>
+                  <input type='text' placeholder='Your Name' />
                 </FormGroup>
                 <FormGroup>
-                  <input type="text" placeholder="Your Email"/>
+                  <input type='text' placeholder='Your Email' />
                 </FormGroup>
               </Block>
               <FormGroupSecond>
-                <input type="text" placeholder="Subject"/>
+                <input type='text' placeholder='Subject' />
               </FormGroupSecond>
               <FormGroupSecond>
-                <textarea
-                  name="message"
-                  rows={5}
-                  placeholder="Message"
-                ></textarea>
+                <textarea name='message' rows={5} placeholder='Message'></textarea>
               </FormGroupSecond>
               <BlockButton>
-                <button type="submit">Send Message</button>
+                <button type='submit'>Send Message</button>
               </BlockButton>
             </form>
           </FormBlock>

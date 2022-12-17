@@ -1,5 +1,5 @@
-import BannerPortfolioDetals from "../../Components/BannerPortfolioDetals/view";
-import ProductItem from "../../Components/ProductItem/view";
+import BannerPortfolioDetals from '../../Components/BannerPortfolioDetals/view';
+import ProductItem from '../../Components/ProductItem/view';
 
 const PortfolioDetals = () => {
   return (

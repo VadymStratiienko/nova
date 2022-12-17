@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import {
   RiBarChartBoxLine,
   RiBaseStationLine,
@@ -8,12 +8,12 @@ import {
   RiGradienterLine,
   RiPaintBrushLine,
   RiStoreLine,
-} from "react-icons/ri";
-import Iphpne from "../../assets/img/iphone.png";
+} from 'react-icons/ri';
+import Iphpne from '../../assets/img/iphone.png';
 
 const Container = styled.div`
   width: 100%;
-  
+
   margin-right: auto;
   margin-left: auto;
   margin: 0 auto;
@@ -23,13 +23,13 @@ const Container = styled.div`
 `;
 
 const TopBlock = styled.div`
-max-width:1320px;
+  max-width: 1320px;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  
+
   h3 {
     color: var(--color-secondary);
     font-size: 32px;
@@ -37,7 +37,6 @@ max-width:1320px;
     margin-bottom: 30px;
     font-family: var(--font-primary);
   }
-
 `;
 const Grid = styled.div`
   display: grid;
@@ -100,50 +99,46 @@ const BaseStationLine = styled(RiBaseStationLine)`
   line-height: 1.2;
 `;
 const Row = styled.div`
-display: flex; 
-position: relative;
-  @media (max-width:1024px){
-
+  display: flex;
+  position: relative;
+  @media (max-width: 1024px) {
   }
   @media (max-width: 992px) {
-   
   }
   @media (max-width: 768px) {
-    display: flex; 
-flex-wrap: wrap;
-justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `;
 const PhoneWrapper = styled.div`
-z-index: 2;
-position: absolute;
-    right: 0;
-    img {
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  img {
     width: 340px;
     max-width: 100%;
     height: auto;
     vertical-align: middle;
     @media (max-width: 992px) {
-     z-index: 2;
-     margin-top: 330px;
-  }  
-  @media (max-width: 768px) {
-    height: auto;
-    max-width: 100%;
- margin-top:30px;
-
-  }
+      z-index: 2;
+      margin-top: 330px;
+    }
+    @media (max-width: 768px) {
+      height: auto;
+      max-width: 100%;
+      margin-top: 30px;
+    }
   }
   @media (max-width: 768px) {
     position: relative;
- margin-top:0;
- width: 100%;
- display: flex;
- justify-content: center
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-`
+`;
 const Block = styled.div`
-
   span {
     font-size: 18px;
     color: #29486a;
@@ -157,15 +152,15 @@ const Box = styled.div`
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 `;
 const Details = styled.div`
-margin-top: 80px;
+  margin-top: 80px;
   padding: 120px 0;
   background-color: #f7f9fc;
 `;
 const DetailRow = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
   --bs-gutter-x: 1.5rem;
   width: 100%;
   max-width: 700px;
@@ -230,7 +225,7 @@ flex-wrap: wrap;
 const Features = () => {
   return (
     <section>
-      <Container data-aos="fade-up" data-aos-duration="1000">
+      <Container data-aos='fade-up' data-aos-duration='1000'>
         <TopBlock>
           <Row>
             <div>
@@ -297,7 +292,7 @@ const Features = () => {
               </Grid>
             </div>
             <PhoneWrapper>
-              <img src={Iphpne} alt="" />
+              <img src={Iphpne} alt='' />
             </PhoneWrapper>
           </Row>
         </TopBlock>
@@ -309,11 +304,10 @@ const Features = () => {
               Bonde Naruto
             </h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-              nostrum molestias doloremque quae delectus odit minima corrupti
-              blanditiis quo animi!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nostrum molestias
+              doloremque quae delectus odit minima corrupti blanditiis quo animi!
             </p>
-            <a href="#about">Get Started</a>
+            <a href='#about'>Get Started</a>
           </DetailRow>
         </Details>
       </Container>

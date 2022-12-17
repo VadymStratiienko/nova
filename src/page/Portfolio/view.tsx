@@ -1,6 +1,5 @@
-import BannerPortfolio from "../../Components/BannerPortfolio/view"
-import LandingPortfolio from "../../Components/LandingPortfolio/view"
-
+import BannerPortfolio from '../../Components/BannerPortfolio/view';
+import LandingPortfolio from '../../Components/LandingPortfolio/view';
 
 const Porfolio = () => {
   return (
@@ -8,9 +7,7 @@ const Porfolio = () => {
       <BannerPortfolio />
       <LandingPortfolio />
     </main>
-  )
-}
+  );
+};
 
-export default Porfolio
-
-
+export default Porfolio;

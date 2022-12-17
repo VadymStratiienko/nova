@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import PortfolioHeader from "../../assets/img/portfolio-header.jpg"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import PortfolioHeader from '../../assets/img/portfolio-header.jpg';
 
 const Container = styled.div`
   width: 100%;
@@ -10,12 +10,12 @@ const Container = styled.div`
   padding: 140px 0 60px 0;
   min-height: 30vh;
   position: relative;
-  background-image: url("${PortfolioHeader}");
+  background-image: url('${PortfolioHeader}');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   ::before {
-    content: "";
+    content: '';
     background-color: rgba(27, 47, 69, 0.7);
     position: absolute;
     inset: 0;
@@ -50,7 +50,7 @@ const Block = styled.div`
     display: inline-block;
     padding-right: 10px;
     color: #fff;
-    content: "/";
+    content: '/';
   }
 `;
 const PLink = styled(Link)`
@@ -65,13 +65,13 @@ const PLink = styled(Link)`
 const BannerPortfolioDetals = () => {
   return (
     <section>
-      {" "}
+      {' '}
       <Container>
-        <Block data-aos="fade-up" data-aos-duration="1000">
+        <Block data-aos='fade-up' data-aos-duration='1000'>
           <h2>Portfolio Detals</h2>
           <ol>
             <li>
-              <PLink to="/">Home</PLink>
+              <PLink to='/'>Home</PLink>
             </li>
              <li>Portfolio Detals</li>
           </ol>

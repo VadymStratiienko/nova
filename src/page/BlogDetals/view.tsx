@@ -1,6 +1,5 @@
-
-import BannerBlogDetals from '../../Components/BannerBlogDetals/view'
-import LandingBlogDetails from '../../Components/LandingBlogDetails/view'
+import BannerBlogDetals from '../../Components/BannerBlogDetals/view';
+import LandingBlogDetails from '../../Components/LandingBlogDetails/view';
 
 const BlogDetals = () => {
   return (
@@ -8,7 +7,7 @@ const BlogDetals = () => {
       <BannerBlogDetals />
       <LandingBlogDetails />
     </main>
-  )
-}
+  );
+};
 
-export default BlogDetals
+export default BlogDetals;

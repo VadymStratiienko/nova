@@ -1,10 +1,10 @@
-import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import Team1 from "../../assets/img/team/team-1.jpg";
-import Team2 from "../../assets/img/team/team-2.jpg";
-import Team3 from "../../assets/img/team/team-3.jpg";
-import Team4 from "../../assets/img/team/team-4.jpg";
+import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Team1 from '../../assets/img/team/team-1.jpg';
+import Team2 from '../../assets/img/team/team-2.jpg';
+import Team3 from '../../assets/img/team/team-3.jpg';
+import Team4 from '../../assets/img/team/team-4.jpg';
 
 const Container = styled.div`
   width: 100%;
@@ -14,7 +14,7 @@ const Container = styled.div`
   padding: 80px 0;
 `;
 const TeamContainer = styled.div`
-margin: 0 auto;
+  margin: 0 auto;
 `;
 const SectionHeader = styled.div`
   text-align: center;
@@ -28,7 +28,7 @@ const SectionHeader = styled.div`
     position: relative;
 
     ::after {
-      content: "";
+      content: '';
       position: absolute;
       display: block;
       width: 60px;
@@ -95,9 +95,9 @@ const Social = styled.div`
   align-items: center;
   justify-content: center;
   :hover {
-      color: var(--color-primary);
-      opacity: 1;
-    }
+    color: var(--color-primary);
+    opacity: 1;
+  }
   a {
     transition: color 0.3s;
     color: #31547c;
@@ -105,7 +105,6 @@ const Social = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
   }
 `;
 
@@ -135,70 +134,70 @@ const TeamComponent = () => {
     <section>
       <Container>
         <TeamContainer>
-          <SectionHeader data-aos="fade-up" data-aos-duration="1000">
+          <SectionHeader data-aos='fade-up' data-aos-duration='1000'>
             <h2>Our Team</h2>
           </SectionHeader>
-          <WrapperBlocks data-aos="fade-up" data-aos-duration="1000">
+          <WrapperBlocks data-aos='fade-up' data-aos-duration='1000'>
             <Block>
               <BlockImg>
-                <img src={Team1} alt="" />
+                <img src={Team1} alt='' />
                 <Social>
-                  <Link to="https://twitter.com/">
+                  <Link to='https://twitter.com/'>
                     <Twitter />
                   </Link>
-                  <Link to="https://www.facebook.com/">
+                  <Link to='https://www.facebook.com/'>
                     <Facebook />
                   </Link>
-                  <Link to="https://www.instagram.com">
+                  <Link to='https://www.instagram.com'>
                     <Instagram />
                   </Link>
-                  <Link to="https://www.linkedin.com/">
+                  <Link to='https://www.linkedin.com/'>
                     <Linkedin />
                   </Link>
                 </Social>
               </BlockImg>
-              <Info data-aos="fade-up" data-aos-duration="1000">
+              <Info data-aos='fade-up' data-aos-duration='1000'>
                 <h4>Walter White</h4>
                 <span>Chief Excutive Officer</span>
               </Info>
             </Block>
             <Block>
-              <BlockImg data-aos="fade-up" data-aos-duration="1000">
-                <img src={Team2} alt="" />
+              <BlockImg data-aos='fade-up' data-aos-duration='1000'>
+                <img src={Team2} alt='' />
                 <Social>
-                  <Link to="https://twitter.com/">
+                  <Link to='https://twitter.com/'>
                     <BsTwitter />
                   </Link>
-                  <Link to="https://www.facebook.com/">
+                  <Link to='https://www.facebook.com/'>
                     <BsFacebook />
                   </Link>
-                  <Link to="https://www.instagram.com">
+                  <Link to='https://www.instagram.com'>
                     <BsInstagram />
                   </Link>
-                  <Link to="https://www.linkedin.com/">
+                  <Link to='https://www.linkedin.com/'>
                     <BsLinkedin />
                   </Link>
                 </Social>
               </BlockImg>
-              <Info data-aos="fade-up" data-aos-duration="1000">
+              <Info data-aos='fade-up' data-aos-duration='1000'>
                 <h4>Sara Jhonson</h4>
                 <span>Product Manager</span>
               </Info>
             </Block>
             <Block>
-              <BlockImg data-aos="fade-up" data-aos-duration="1000">
-                <img src={Team3} alt="" />
+              <BlockImg data-aos='fade-up' data-aos-duration='1000'>
+                <img src={Team3} alt='' />
                 <Social>
-                  <Link to="https://twitter.com/">
+                  <Link to='https://twitter.com/'>
                     <BsTwitter />
                   </Link>
-                  <Link to="https://www.facebook.com/">
+                  <Link to='https://www.facebook.com/'>
                     <BsFacebook />
                   </Link>
-                  <Link to="https://www.instagram.com">
+                  <Link to='https://www.instagram.com'>
                     <BsInstagram />
                   </Link>
-                  <Link to="https://www.linkedin.com/">
+                  <Link to='https://www.linkedin.com/'>
                     <BsLinkedin />
                   </Link>
                 </Social>
@@ -209,24 +208,24 @@ const TeamComponent = () => {
               </Info>
             </Block>
             <Block>
-              <BlockImg data-aos="fade-up" data-aos-duration="1000">
-                <img src={Team4} alt="" />
+              <BlockImg data-aos='fade-up' data-aos-duration='1000'>
+                <img src={Team4} alt='' />
                 <Social>
-                  <Link to="https://twitter.com/">
+                  <Link to='https://twitter.com/'>
                     <BsTwitter />
                   </Link>
-                  <Link to="https://www.facebook.com/">
+                  <Link to='https://www.facebook.com/'>
                     <BsFacebook />
                   </Link>
-                  <Link to="https://www.instagram.com">
+                  <Link to='https://www.instagram.com'>
                     <BsInstagram />
                   </Link>
-                  <Link to="https://www.linkedin.com/">
+                  <Link to='https://www.linkedin.com/'>
                     <BsLinkedin />
                   </Link>
                 </Social>
               </BlockImg>
-              <Info data-aos="fade-up" data-aos-duration="1000">
+              <Info data-aos='fade-up' data-aos-duration='1000'>
                 <h4>Amanda Jepson</h4>
                 <span>Accountant</span>
               </Info>

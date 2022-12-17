@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Navbar = styled.nav`
   display: none;
@@ -33,7 +33,7 @@ const Ul = styled.ul<{ open: boolean }>`
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
-    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
   }
   li {
     color: #fff;
@@ -48,53 +48,53 @@ interface ISidebar {
 const Sidebar = ({ open, setOpen }: ISidebar) => {
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = "hidden";
-    } else  {
-      document.body.style.overflow = "visible";
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
     }
   }, [open]);
 
   let routes = [
     {
-      title: "Home",
-      link: "/",
+      title: 'Home',
+      link: '/',
     },
     {
-      title: "About",
-      link: "about",
+      title: 'About',
+      link: 'about',
     },
     {
-      title: "Services",
-      link: "services",
+      title: 'Services',
+      link: 'services',
     },
     {
-      title: "Portfolio",
-      link: "portfolio",
+      title: 'Portfolio',
+      link: 'portfolio',
     },
     {
-      title: "Team",
-      link: "team",
+      title: 'Team',
+      link: 'team',
     },
     {
-      title: "Blog",
-      link: "blog",
+      title: 'Blog',
+      link: 'blog',
     },
     {
-      title: "Contact",
-      link: "contact",
+      title: 'Contact',
+      link: 'contact',
     },
   ];
 
   return (
-    <Navbar data-aos="fade-up" data-aos-duration="1000">
+    <Navbar data-aos='fade-up' data-aos-duration='1000'>
       <Ul open={open}>
         {routes.map((el, index) => {
           return (
             <li key={index}>
               <NavLink
                 style={({ isActive }) => ({
-                  textDecoration: "none",
-                  color: isActive ? "white" : "rgba(255, 255, 255, 0.6)",
+                  textDecoration: 'none',
+                  color: isActive ? 'white' : 'rgba(255, 255, 255, 0.6)',
                 })}
                 to={el.link}
                 onClick={() => setOpen(!open)}

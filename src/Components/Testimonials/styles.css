@@ -10,9 +10,7 @@
   margin: 0 auto;
 }
 
-.mySwiper2 
-
-.mySwiper2.swiper-slide img {
+.mySwiper2 .mySwiper2.swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Modal from "styled-react-modal";
-import FocusLock from "react-focus-lock";
-import ReactPlayer from "react-player";
-import { AiOutlinePlayCircle } from "react-icons/ai";
-import { IoMdClose } from "react-icons/io";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import Modal from 'styled-react-modal';
+import FocusLock from 'react-focus-lock';
+import ReactPlayer from 'react-player';
+import { AiOutlinePlayCircle } from 'react-icons/ai';
+import { IoMdClose } from 'react-icons/io';
+import styled from 'styled-components';
 
 const StyledModal = Modal.styled`
   position: relative;
@@ -63,7 +63,7 @@ function ModalVideo() {
   return (
     <>
       <BtnPlay onClick={toggleModal}>
-        {" "}
+        {' '}
         <Play />
         <span>Watch Video</span>
       </BtnPlay>
@@ -71,16 +71,13 @@ function ModalVideo() {
         isOpen={isOpen}
         onEscapeKeydown={toggleModal}
         //@ts-ignore
-        role="dialog"
+        role='dialog'
         aria-modal={true}
-        aria-labelledby="modal-label"
+        aria-labelledby='modal-label'
       >
         <FocusLock>
           <XIcon onClick={toggleModal} />
-          <ReactPlayer
-            controls={true}
-            url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-          />
+          <ReactPlayer controls={true} url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
         </FocusLock>
       </StyledModal>
     </>

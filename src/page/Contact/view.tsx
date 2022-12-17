@@ -1,6 +1,6 @@
-import React from 'react'
-import BannerContact from '../../Components/BannerContact/view'
-import LandingContact from '../../Components/LandingContact/view'
+import React from 'react';
+import BannerContact from '../../Components/BannerContact/view';
+import LandingContact from '../../Components/LandingContact/view';
 
 const Contact = () => {
   return (
@@ -8,7 +8,7 @@ const Contact = () => {
       <BannerContact />
       <LandingContact />
     </main>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

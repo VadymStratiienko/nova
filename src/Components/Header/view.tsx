@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import Sidebar from "../Sidebar/view";
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+import Sidebar from '../Sidebar/view';
 
 const Head = styled.header<{ isScrolled: boolean }>`
-  background: ${({ isScrolled }) => isScrolled && "rgba(27, 47, 69, 0.9)"};
+  background: ${({ isScrolled }) => isScrolled && 'rgba(27, 47, 69, 0.9)'};
   padding: 24px 0;
   position: fixed;
   z-index: 99;
@@ -80,19 +80,19 @@ const StyledBurger = styled.div<{ open: boolean }>`
   div {
     width: 28px;
     height: 2px;
-    background-color: ${({ open }) => (open ? "#ccc" : "#ffffff")};
+    background-color: ${({ open }) => (open ? '#ccc' : '#ffffff')};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
     &:nth-child(1) {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
     }
     &:nth-child(2) {
-      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      transform: ${({ open }) => (open ? 'translateX(100%)' : 'translateX(0)')};
       opacity: ${({ open }) => (open ? 0 : 1)};
     }
     &:nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 `;
@@ -110,47 +110,47 @@ const Header = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   let routes = [
     {
-      title: "Home",
-      link: "/",
+      title: 'Home',
+      link: '/',
     },
     {
-      title: "About",
-      link: "about",
+      title: 'About',
+      link: 'about',
     },
     {
-      title: "Services",
-      link: "services",
+      title: 'Services',
+      link: 'services',
     },
     {
-      title: "Portfolio",
-      link: "portfolio",
+      title: 'Portfolio',
+      link: 'portfolio',
     },
     {
-      title: "Team",
-      link: "team",
+      title: 'Team',
+      link: 'team',
     },
     {
-      title: "Blog",
-      link: "blog",
+      title: 'Blog',
+      link: 'blog',
     },
     {
-      title: "Contact",
-      link: "contact",
+      title: 'Contact',
+      link: 'contact',
     },
   ];
 
   return (
     <Head isScrolled={isScrolled}>
-      <Container data-aos="fade-up">
+      <Container data-aos='fade-up'>
         <Logo>Nova</Logo>
         <Navbar>
           <ul>
@@ -159,8 +159,8 @@ const Header = () => {
                 <li key={index}>
                   <NavLink
                     style={({ isActive }) => ({
-                      textDecoration: "none",
-                      color: isActive ? "white" : "rgba(255, 255, 255, 0.6)",
+                      textDecoration: 'none',
+                      color: isActive ? 'white' : 'rgba(255, 255, 255, 0.6)',
                     })}
                     to={el.link}
                   >
@@ -171,11 +171,7 @@ const Header = () => {
             })}
           </ul>
         </Navbar>
-        <StyledBurger
-          open={open}
-          onClick={() => setOpen(!open)}
-          style={{ marginLeft: "20px" }}
-        >
+        <StyledBurger open={open} onClick={() => setOpen(!open)} style={{ marginLeft: '20px' }}>
           <div />
           <div />
           <div />

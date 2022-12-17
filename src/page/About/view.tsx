@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 import BannerAbout from '../../Components/BannerAbout/view';
 import LandingAbout from '../../Components/LandingAbout/view';
-
 
 const About = () => {
   return (
@@ -9,7 +8,7 @@ const About = () => {
       <BannerAbout />
       <LandingAbout />
     </main>
-  )
-}
+  );
+};
 
 export default About;

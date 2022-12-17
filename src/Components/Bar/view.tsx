@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { BsSearch } from "react-icons/bs";
-import styled from "styled-components";
-import Recent1 from "../../assets/img/blog/blog-recent-1.jpg";
-import Recent2 from "../../assets/img/blog/blog-recent-1.jpg";
-import Recent3 from "../../assets/img/blog/blog-recent-1.jpg";
-import Recent4 from "../../assets/img/blog/blog-recent-1.jpg";
-import Recent5 from "../../assets/img/blog/blog-recent-1.jpg";
+import { Link } from 'react-router-dom';
+import { BsSearch } from 'react-icons/bs';
+import styled from 'styled-components';
+import Recent1 from '../../assets/img/blog/blog-recent-1.jpg';
+import Recent2 from '../../assets/img/blog/blog-recent-1.jpg';
+import Recent3 from '../../assets/img/blog/blog-recent-1.jpg';
+import Recent4 from '../../assets/img/blog/blog-recent-1.jpg';
+import Recent5 from '../../assets/img/blog/blog-recent-1.jpg';
 
 const Bar = styled.div`
   margin-top: 48px;
@@ -59,7 +59,7 @@ const SearchForm = styled.div`
     padding: 3px 10px;
     position: relative;
 
-    input[type="text"] {
+    input[type='text'] {
       border: 0;
       padding: 4px;
       border-radius: 4px;
@@ -159,41 +159,41 @@ interface IRecent {
 const ArrayRecent: IRecent[] = [
   {
     img: Recent1,
-    header: "Nihil blanditiis at in nihil autem",
-    time: "Jan 1, 2020",
+    header: 'Nihil blanditiis at in nihil autem',
+    time: 'Jan 1, 2020',
   },
   {
     img: Recent2,
-    header: "Quidem autem et impedit",
-    time: "Jan 1, 2020",
+    header: 'Quidem autem et impedit',
+    time: 'Jan 1, 2020',
   },
   {
     img: Recent3,
-    header: "Id quia et et ut maxime similique occaecati ut",
-    time: "Jan 1, 2020",
+    header: 'Id quia et et ut maxime similique occaecati ut',
+    time: 'Jan 1, 2020',
   },
   {
     img: Recent4,
-    header: "Laborum corporis quo dara net para",
-    time: "Jan 1, 2020",
+    header: 'Laborum corporis quo dara net para',
+    time: 'Jan 1, 2020',
   },
   {
     img: Recent5,
-    header: "Et dolores corrupti quae illo quod dolor",
-    time: "Jan 1, 2020",
+    header: 'Et dolores corrupti quae illo quod dolor',
+    time: 'Jan 1, 2020',
   },
 ];
 
 const BarComponent = () => {
   return (
     <>
-      {" "}
-      <Bar data-aos="fade-up" data-aos-duration="1000">
+      {' '}
+      <Bar data-aos='fade-up' data-aos-duration='1000'>
         <SearchForm>
           <h3>Search</h3>
-          <form action="">
-            <input type="text" />
-            <button type="submit">
+          <form action=''>
+            <input type='text' />
+            <button type='submit'>
               <BsSearch />
             </button>
           </form>
@@ -202,46 +202,46 @@ const BarComponent = () => {
           <h3>Categories</h3>
           <ul>
             <li>
-              <Link to="">
+              <Link to=''>
                 General<span>(25)</span>
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to=''>
                 Lifestyle<span>(12)</span>
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to=''>
                 Travel<span>(5)</span>
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to=''>
                 Design<span>(22)</span>
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to=''>
                 Creative<span>(8)</span>
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to=''>
                 Eduaction<span>(14)</span>
               </Link>
             </li>
           </ul>
         </Categories>
-        <RecentPostsWrapper data-aos="fade-up" data-aos-duration="1000">
+        <RecentPostsWrapper data-aos='fade-up' data-aos-duration='1000'>
           <h3>Recent Posts</h3>
           {ArrayRecent.map((item, index) => {
             return (
               <RecentPost key={index}>
-                <img src={item.img} alt="" />
+                <img src={item.img} alt='' />
                 <div>
                   <h4>
-                    <Link to="">{item.header}</Link>
+                    <Link to=''>{item.header}</Link>
                   </h4>
                   <time>{item.time}</time>
                 </div>
@@ -249,41 +249,41 @@ const BarComponent = () => {
             );
           })}
         </RecentPostsWrapper>
-        <Tags data-aos="fade-up" data-aos-duration="1000">
+        <Tags data-aos='fade-up' data-aos-duration='1000'>
           <h3>Tags</h3>
           <ul>
             <li>
-              <Link to="">App</Link>
+              <Link to=''>App</Link>
             </li>
             <li>
-              <Link to="">IT</Link>
+              <Link to=''>IT</Link>
             </li>
             <li>
-              <Link to="">Business</Link>
+              <Link to=''>Business</Link>
             </li>
             <li>
-              <Link to="">Mac</Link>
+              <Link to=''>Mac</Link>
             </li>
             <li>
-              <Link to="">Design</Link>
+              <Link to=''>Design</Link>
             </li>
             <li>
-              <Link to="">Office</Link>
+              <Link to=''>Office</Link>
             </li>
             <li>
-              <Link to="">Creative</Link>
+              <Link to=''>Creative</Link>
             </li>
             <li>
-              <Link to="">Studio</Link>
+              <Link to=''>Studio</Link>
             </li>
             <li>
-              <Link to="">Smart</Link>
+              <Link to=''>Smart</Link>
             </li>
             <li>
-              <Link to="">Tips</Link>
+              <Link to=''>Tips</Link>
             </li>
             <li>
-              <Link to="">Marketing</Link>
+              <Link to=''>Marketing</Link>
             </li>
           </ul>
         </Tags>

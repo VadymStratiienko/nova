@@ -1,16 +1,16 @@
-import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "./styles.css";
-import Testimonials1 from "../../assets/img/testimonials/testimonials-1.jpg";
-import Testimonials2 from "../../assets/img/testimonials/testimonials-2.jpg";
-import Testimonials3 from "../../assets/img/testimonials/testimonials-3.jpg";
-import Testimonials4 from "../../assets/img/testimonials/testimonials-4.jpg";
-import Testimonials5 from "../../assets/img/testimonials/testimonials-5.jpg";
-import { BsFillStarFill } from "react-icons/bs";
+import styled from 'styled-components';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import './styles.css';
+import Testimonials1 from '../../assets/img/testimonials/testimonials-1.jpg';
+import Testimonials2 from '../../assets/img/testimonials/testimonials-2.jpg';
+import Testimonials3 from '../../assets/img/testimonials/testimonials-3.jpg';
+import Testimonials4 from '../../assets/img/testimonials/testimonials-4.jpg';
+import Testimonials5 from '../../assets/img/testimonials/testimonials-5.jpg';
+import { BsFillStarFill } from 'react-icons/bs';
 
 const Container = styled.div`
   overflow: hidden;
@@ -66,24 +66,24 @@ const Container = styled.div`
   }
 
   .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: white;
- padding: 0;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
+    text-align: center;
+    font-size: 18px;
+    background: white;
+    padding: 0;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
 `;
 
 const SectionHeader = styled.div`
@@ -98,7 +98,7 @@ const SectionHeader = styled.div`
     position: relative;
 
     ::after {
-      content: "";
+      content: '';
       position: absolute;
       display: block;
       width: 60px;
@@ -158,7 +158,7 @@ const Testimonials = () => {
   return (
     <section>
       <Container>
-        <SectionHeader data-aos="fade-up" data-aos-duration="1000">
+        <SectionHeader data-aos='fade-up' data-aos-duration='1000'>
           <h2>Testimonials</h2>
         </SectionHeader>
         <>
@@ -175,9 +175,9 @@ const Testimonials = () => {
               clickable: true,
             }}
             modules={[Autoplay, Pagination]}
-            className="mySwiper2"
+            className='mySwiper2'
           >
-            <SwiperSlide data-aos="fade-up" data-aos-duration="1000">
+            <SwiperSlide data-aos='fade-up' data-aos-duration='1000'>
               <Item>
                 <div>
                   <Star />
@@ -187,19 +187,18 @@ const Testimonials = () => {
                   <Star />
                 </div>
                 <Text>
-                  Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                  eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                  semper.
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                  rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen
+                  aliquam, risus at semper.
                 </Text>
                 <Info>
-                  <img src={Testimonials1} alt="" />
+                  <img src={Testimonials1} alt='' />
                   <h3>Saul Goodman</h3>
                   <h4>Ceo &amp; Founder</h4>
                 </Info>
               </Item>
             </SwiperSlide>
-            <SwiperSlide data-aos="fade-up" data-aos-duration="1000">
+            <SwiperSlide data-aos='fade-up' data-aos-duration='1000'>
               <Item>
                 <div>
                   <Star />
@@ -209,19 +208,18 @@ const Testimonials = () => {
                   <Star />
                 </div>
                 <Text>
-                  Export tempor illum tamen malis malis eram quae irure esse
-                  labore quem cillum quid cillum eram malis quorum velit fore
-                  eram velit sunt aliqua noster fugiat irure amet legam anim
-                  culpa.
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum
+                  quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat
+                  irure amet legam anim culpa.
                 </Text>
                 <Info>
-                  <img src={Testimonials2} alt="" />
+                  <img src={Testimonials2} alt='' />
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                 </Info>
               </Item>
             </SwiperSlide>
-            <SwiperSlide data-aos="fade-up" data-aos-duration="1000">
+            <SwiperSlide data-aos='fade-up' data-aos-duration='1000'>
               <Item>
                 <div>
                   <Star />
@@ -231,18 +229,18 @@ const Testimonials = () => {
                   <Star />
                 </div>
                 <Text>
-                  Enim nisi quem export duis labore cillum quae magna enim sint
-                  quorum nulla quem veniam duis minim tempor labore quem eram
-                  duis noster aute amet eram fore quis sint minim.
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
+                  veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis
+                  sint minim.
                 </Text>
                 <Info>
-                  <img src={Testimonials3} alt="" />
+                  <img src={Testimonials3} alt='' />
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
                 </Info>
               </Item>
             </SwiperSlide>
-            <SwiperSlide data-aos="fade-up" data-aos-duration="1000">
+            <SwiperSlide data-aos='fade-up' data-aos-duration='1000'>
               <Item>
                 <div>
                   <Star />
@@ -252,19 +250,18 @@ const Testimonials = () => {
                   <Star />
                 </div>
                 <Text>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa
-                  multos export minim fugiat minim velit minim dolor enim duis
-                  veniam ipsum anim magna sunt elit fore quem dolore labore
-                  illum veniam.
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
+                  fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore
+                  quem dolore labore illum veniam.
                 </Text>
                 <Info>
-                  <img src={Testimonials4} alt="" />
+                  <img src={Testimonials4} alt='' />
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
                 </Info>
               </Item>
             </SwiperSlide>
-            <SwiperSlide data-aos="fade-up" data-aos-duration="1000">
+            <SwiperSlide data-aos='fade-up' data-aos-duration='1000'>
               <Item>
                 <div>
                   <Star />
@@ -274,14 +271,13 @@ const Testimonials = () => {
                   <Star />
                 </div>
                 <Text>
-                  {" "}
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua
-                  veniam tempor noster veniam enim culpa labore duis sunt culpa
-                  nulla illum cillum fugiat legam esse veniam culpa fore nisi
-                  cillum quid.
+                  {' '}
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor
+                  noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam
+                  esse veniam culpa fore nisi cillum quid.
                 </Text>
                 <Info>
-                  <img src={Testimonials5} alt="" />
+                  <img src={Testimonials5} alt='' />
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
                 </Info>

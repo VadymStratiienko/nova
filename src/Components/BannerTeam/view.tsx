@@ -1,22 +1,22 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import TeamHeader from "../../assets/img/team-header.jpg";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import TeamHeader from '../../assets/img/team-header.jpg';
 
 const Container = styled.div`
-   width: 100%;
-   background-image:url("${TeamHeader}") ;
-   padding: 140px 0 60px ;
-    min-height: 30vh;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    ::before {
-    content: "";
+  width: 100%;
+  background-image: url('${TeamHeader}');
+  padding: 140px 0 60px;
+  min-height: 30vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  ::before {
+    content: '';
     background-color: rgba(27, 47, 69, 0.7);
     position: absolute;
     inset: 0;
-}
+  }
 `;
 const Block = styled.div`
   padding: 0 12px;
@@ -47,7 +47,7 @@ const Block = styled.div`
     display: inline-block;
     padding-right: 10px;
     color: #fff;
-    content: "/";
+    content: '/';
   }
 `;
 const TLink = styled(Link)`
@@ -62,11 +62,11 @@ const BannerTeam = () => {
   return (
     <section>
       <Container>
-        <Block data-aos="fade-up" data-aos-duration="1000">
+        <Block data-aos='fade-up' data-aos-duration='1000'>
           <h2>Team</h2>
           <ol>
             <li>
-              <TLink to="/">Home</TLink>
+              <TLink to='/'>Home</TLink>
             </li>
              <li>Team</li>
           </ol>

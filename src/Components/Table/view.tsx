@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import {
   BsBarChart,
   BsBinoculars,
@@ -6,7 +6,7 @@ import {
   BsBrightnessHigh,
   BsCalendar4Week,
   BsCardChecklist,
-} from "react-icons/bs";
+} from 'react-icons/bs';
 
 const Container = styled.div`
   padding-bottom: 80px;
@@ -16,7 +16,7 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width:1320px;
+  max-width: 1320px;
 `;
 const BlockHeader = styled.div`
   text-align: center;
@@ -125,102 +125,102 @@ const Text = styled.p`
 const Table = () => {
   return (
     <section>
-    <Container>
-      <BlockHeader data-aos="fade-up" data-aos-duration="1000">
-        <h2>Our Services</h2>
-      </BlockHeader>
-      <TableGrid data-aos="fade-up" data-aos-duration="1000">
-        <Block>
-          <BlockIcon>
-            <Briefcase />
-          </BlockIcon>
-          <BlockText>
-            <H4>
-              <Link href="#">Lorem Ipsum</Link>
-            </H4>
-            <Text>
-              Voluptatum deleniti atque corrupti quos dolores et quas molestias
-              excepturi sint occaecati cupiditate non provident
-            </Text>
-          </BlockText>
-        </Block>
+      <Container>
+        <BlockHeader data-aos='fade-up' data-aos-duration='1000'>
+          <h2>Our Services</h2>
+        </BlockHeader>
+        <TableGrid data-aos='fade-up' data-aos-duration='1000'>
+          <Block>
+            <BlockIcon>
+              <Briefcase />
+            </BlockIcon>
+            <BlockText>
+              <H4>
+                <Link href='#'>Lorem Ipsum</Link>
+              </H4>
+              <Text>
+                Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                occaecati cupiditate non provident
+              </Text>
+            </BlockText>
+          </Block>
 
-        <Block>
-          <BlockIcon>
-            <CardChecklist />
-          </BlockIcon>
-          <BlockText>
-            <H4>
-              <Link href="#">Dolor Sitema</Link>
-            </H4>
-            <Text>
-              Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat tarad limino ata
-            </Text>
-          </BlockText>
-        </Block>
+          <Block>
+            <BlockIcon>
+              <CardChecklist />
+            </BlockIcon>
+            <BlockText>
+              <H4>
+                <Link href='#'>Dolor Sitema</Link>
+              </H4>
+              <Text>
+                Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat tarad limino ata
+              </Text>
+            </BlockText>
+          </Block>
 
-        <Block>
-          <BlockIcon>
-            <BarChart />
-          </BlockIcon>
-          <BlockText>
-            <H4>
-              <Link href="#">Sed ut perspiciatis</Link>
-            </H4>
-            <Text>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur
-            </Text>
-          </BlockText>
-        </Block>
+          <Block>
+            <BlockIcon>
+              <BarChart />
+            </BlockIcon>
+            <BlockText>
+              <H4>
+                <Link href='#'>Sed ut perspiciatis</Link>
+              </H4>
+              <Text>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur
+              </Text>
+            </BlockText>
+          </Block>
 
-        <Block>
-          <BlockIcon>
-            <Binoculars />
-          </BlockIcon>
-          <BlockText>
-            <H4>
-              <Link href="#">Magni Dolores</Link>
-            </H4>
-            <Text>
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum
-            </Text>
-          </BlockText>
-        </Block>
+          <Block>
+            <BlockIcon>
+              <Binoculars />
+            </BlockIcon>
+            <BlockText>
+              <H4>
+                <Link href='#'>Magni Dolores</Link>
+              </H4>
+              <Text>
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum
+              </Text>
+            </BlockText>
+          </Block>
 
-        <Block>
-          <BlockIcon>
-            <BrightnessHigh />
-          </BlockIcon>
-          <BlockText>
-            <H4>
-              <Link href="#">Nemo Enim</Link>
-            </H4>
-            <Text>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque
-            </Text>
-          </BlockText>
-        </Block>
+          <Block>
+            <BlockIcon>
+              <BrightnessHigh />
+            </BlockIcon>
+            <BlockText>
+              <H4>
+                <Link href='#'>Nemo Enim</Link>
+              </H4>
+              <Text>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                praesentium voluptatum deleniti atque
+              </Text>
+            </BlockText>
+          </Block>
 
-        <Block>
-          <BlockIcon>
-            <Calendar4Week />
-          </BlockIcon>
-          <BlockText>
-            <H4>
-              <Link href="#">Eiusmod Tempor</Link>
-            </H4>
-            <Text>
-              Et harum quidem rerum facilis est et expedita distinctio. Nam
-              libero tempore, cum soluta nobis est eligendi
-            </Text>
-          </BlockText>
-        </Block>
-      </TableGrid>
-    </Container>
+          <Block>
+            <BlockIcon>
+              <Calendar4Week />
+            </BlockIcon>
+            <BlockText>
+              <H4>
+                <Link href='#'>Eiusmod Tempor</Link>
+              </H4>
+              <Text>
+                Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                soluta nobis est eligendi
+              </Text>
+            </BlockText>
+          </Block>
+        </TableGrid>
+      </Container>
     </section>
   );
 };

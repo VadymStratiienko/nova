@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import BarComponent from "../Bar/view";
-import PostDetails from "../Post/view";
+import styled from 'styled-components';
+import BarComponent from '../Bar/view';
+import PostDetails from '../Post/view';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -9,7 +9,7 @@ const Container = styled.div`
   overflow: hidden;
   padding: 80px 0;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   max-width: 1344px;
   @media (max-width: 1350px) {
     flex-wrap: wrap;
@@ -19,12 +19,12 @@ const Container = styled.div`
 const LandingBlogDetails = () => {
   return (
     <section>
-    <Container data-aos="fade-up" data-aos-duration="1000">
-      <PostDetails />
+      <Container data-aos='fade-up' data-aos-duration='1000'>
+        <PostDetails />
         <BarComponent />
-    </Container>
+      </Container>
     </section>
-  )
-}
+  );
+};
 
-export default LandingBlogDetails
+export default LandingBlogDetails;
