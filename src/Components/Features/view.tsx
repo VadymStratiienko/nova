@@ -13,19 +13,20 @@ import Iphpne from "../../assets/img/iphone.png";
 
 const Container = styled.div`
   width: 100%;
+  
   margin-right: auto;
   margin-left: auto;
+  margin: 0 auto;
   padding-bottom: 0;
   overflow: hidden;
   padding: 80px 0;
 `;
 
 const TopBlock = styled.div`
+max-width:1320px;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 12.5);
-  padding-left: calc(var(--bs-gutter-x) * 12.5);
   margin-right: auto;
   margin-left: auto;
   
@@ -37,36 +38,6 @@ const TopBlock = styled.div`
     font-family: var(--font-primary);
   }
 
-  @media (max-width: 1680px) {
-    padding-right: calc(var(--bs-gutter-x) * 6);
-    padding-left: calc(var(--bs-gutter-x) * 6);
-  }
-  @media (max-width: 1590px) {
-    padding-right: calc(var(--bs-gutter-x) * 5);
-    padding-left: calc(var(--bs-gutter-x) * 5);
-  }
-  @media (max-width: 1380px) {
-    padding-right: calc(var(--bs-gutter-x) * 4);
-    padding-left: calc(var(--bs-gutter-x) * 4);
-  }
-  @media (max-width: 1278px) {
-    padding-right: calc(var(--bs-gutter-x) * 3);
-    padding-left: calc(var(--bs-gutter-x) * 3);
-  }
-  @media (max-width: 1200px) {
-    padding-right: calc(var(--bs-gutter-x) * 1);
-    padding-left: calc(var(--bs-gutter-x) * 1);
-  }
-
-  @media (max-width: 992px) {
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-
-  }
-  @media (max-width: 768px) {
-    padding-right: calc(var(--bs-gutter-x) * 2);
-    padding-left: calc(var(--bs-gutter-x) * 2);
-  }
 `;
 const Grid = styled.div`
   display: grid;
@@ -140,6 +111,7 @@ position: relative;
   @media (max-width: 768px) {
     display: flex; 
 flex-wrap: wrap;
+justify-content: center;
   }
 `;
 const PhoneWrapper = styled.div`
@@ -159,12 +131,15 @@ position: absolute;
     height: auto;
     max-width: 100%;
  margin-top:30px;
+
   }
   }
   @media (max-width: 768px) {
     position: relative;
  margin-top:0;
  width: 100%;
+ display: flex;
+ justify-content: center
   }
 `
 const Block = styled.div`
@@ -196,10 +171,12 @@ flex-wrap: wrap;
   max-width: 700px;
   padding-left: calc(var(--bs-gutter-x) * 12.5);
   @media (max-width: 992px) {
-    width: 400px;
+    max-width: 400px;
   }
   @media (max-width: 768px) {
-    width: 300px;
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
   }
 
   h4 {
@@ -247,6 +224,7 @@ flex-wrap: wrap;
   }
   @media (max-width: 768px) {
     padding-left: calc(var(--bs-gutter-x) * 1);
+    text-align: center;
   }
 `;
 const Features = () => {

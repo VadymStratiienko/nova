@@ -12,25 +12,11 @@ const Container = styled.div`
   padding-bottom: 80px;
   overflow: hidden;
   padding: 80px 0;
-  margin: 0 300px;
-  @media (max-width: 1680px) {
-    margin: 0 160px;
-  }
-  @media (max-width: 1590px) {
-    margin: 0 128px;
-  }
-  @media (max-width: 1500px) {
-    margin: 0 100px;
-  }
-  @media (max-width: 1400px) {
-    margin: 0 50px;
-  }
-  @media (max-width: 1380px) {
-    margin: 0 45px;
-  }
-  @media (max-width: 1278px) {
-    margin: 0 30px;
-  }
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width:1320px;
 `;
 const BlockHeader = styled.div`
   text-align: center;

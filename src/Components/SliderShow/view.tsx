@@ -7,48 +7,66 @@ const Container = styled.div`
   overflow: hidden;
   padding: 80px 0;
   width: 100%;
+  max-width: 1320px;
   margin-right: auto;
   margin-left: auto;
   margin: 0 auto;
-  max-width: 1320px;
-  min-width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 `;
 const BlockSlider = styled.div`
   display: flex;
   flex-direction: row;
+
   padding: 0 12px;
-  flex-shrink: 1;
   justify-content: center;
-  @media (max-width: 1200px) {
+  @media (max-width: 1320px) {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 `;
 const BgImgDiv = styled.div`
-background-image: url("${BgImg}");
-background-size: cover;
-    max-height: 570px;
-    min-height: 500px;
-     max-width: 540px;
-     min-width: 350px;
-     
-    @media (max-width:1400px) {
-        max-height: 653px;
-        max-width: 465px;
+  width: 100%;
+  max-width: 540px;
+  min-width: 350px;
+  max-height: 578px;
+  height: 100%;
+  display: flex;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    @media (max-width: 1320px) {
+      object-position: top;
+      object-fit: none;
     }
-    @media (max-width:1200px) {
-  max-width: 936px;
+    @media (max-width: 765px) {
+      object-fit: contain;
+  }
+  }
+
+  @media (max-width: 1320px) {
+    max-width: 936px;
+    width: 100%;
+    min-width: 350px;
   }
   @media (max-width:992px) {
-  max-width: 696px;
-  max-height: 500px;
+    max-width: 696px;
   }
-  @media (max-width:768px) {
-
-  width: 516px;
-  height: 500px;
+  @media (max-width: 765px) {
+    max-width: 516px;
   }
-  
+  @media (max-width: 600px) {
+    max-width: 450px;
+    min-width: 350px;
+  }
+  @media (max-width: 500px) {
+    max-width: 350px;
+  }
 `;
 const SectionHeader = styled.h2`
   font-size: 32px;
@@ -84,7 +102,9 @@ const SliderShow = () => {
           </SectionHeader>
         </SectionDiv>
         <BlockSlider data-aos="fade-up" data-aos-duration="1000">
-          <BgImgDiv></BgImgDiv>
+          <BgImgDiv>
+            <img src={BgImg} alt="" />
+          </BgImgDiv>
           <div>
             <SwiperShow />
           </div>

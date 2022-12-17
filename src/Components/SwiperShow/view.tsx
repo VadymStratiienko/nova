@@ -27,11 +27,16 @@ const Text = styled.p`
   margin-bottom: 16px;
 `;
 const Block = styled.div`
+text-align: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   flex-shrink: 1;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
 `;
 
 const SwiperShow = () => {
