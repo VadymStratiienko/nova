@@ -95,6 +95,10 @@ const PostImg = styled.div`
     height: auto;
     vertical-align: middle;
     max-width: 306px;
+    
+    :hover {
+      transform: scale(1.1);
+    }
   }
 `;
 const Date = styled.span`
