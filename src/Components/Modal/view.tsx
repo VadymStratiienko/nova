@@ -56,27 +56,25 @@ const XIcon = styled(IoMdClose)`
 function ModalVideo() {
   const [isOpen, setIsOpen] = useState(false);
 
-  function toggleModal(e: any) {
+  function toggleModal() {
     setIsOpen(!isOpen);
   }
 
   return (
     <>
-      <BtnPlay onClick={toggleModal}>
+      <BtnPlay onClick={()=>toggleModal()}>
         {' '}
         <Play />
         <span>Watch Video</span>
       </BtnPlay>
       <StyledModal
         isOpen={isOpen}
-        onEscapeKeydown={toggleModal}
-        //@ts-ignore
-        role='dialog'
+        onEscapeKeydown={()=>toggleModal()}
         aria-modal={true}
         aria-labelledby='modal-label'
       >
         <FocusLock>
-          <XIcon onClick={toggleModal} />
+          <XIcon onClick={()=>toggleModal()} />
           <ReactPlayer controls={true} url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
         </FocusLock>
       </StyledModal>

@@ -7,7 +7,7 @@ const Head = styled.header<{ isScrolled: boolean }>`
   background: ${({ isScrolled }) => isScrolled && 'rgba(27, 47, 69, 0.9)'};
   padding: 24px 0;
   position: fixed;
-  z-index: 99;
+  z-index: 9;
   transition: all 0.5s;
   width: 100%;
   margin: 0 auto;

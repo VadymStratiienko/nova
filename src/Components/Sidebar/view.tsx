@@ -1,19 +1,19 @@
-import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
-const Navbar = styled.nav`
+const Navbar = styled.nav<{ open: boolean }>`
   display: none;
   @media (max-width: 1278px) {
     display: flex;
     right: 0;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: ${({open}) => (open ? "100%" : "0")};
     max-width: 400px;
     bottom: 0;
     transition: 0.3s;
-    z-index: 9997;
+    z-index: 999;
     overflow: hidden;
   }
   @media (max-width: 992px) {
@@ -32,8 +32,8 @@ const Ul = styled.ul<{ open: boolean }>`
     background: rgba(27, 47, 69, 0.9);
     overflow-y: auto;
     transition: 0.3s;
-    z-index: 9998;
-    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+    z-index: 999;
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   }
   li {
     color: #fff;
@@ -48,53 +48,53 @@ interface ISidebar {
 const Sidebar = ({ open, setOpen }: ISidebar) => {
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'visible';
+      document.body.style.overflow = "visible";
     }
   }, [open]);
 
   let routes = [
     {
-      title: 'Home',
-      link: '/',
+      title: "Home",
+      link: "/",
     },
     {
-      title: 'About',
-      link: 'about',
+      title: "About",
+      link: "about",
     },
     {
-      title: 'Services',
-      link: 'services',
+      title: "Services",
+      link: "services",
     },
     {
-      title: 'Portfolio',
-      link: 'portfolio',
+      title: "Portfolio",
+      link: "portfolio",
     },
     {
-      title: 'Team',
-      link: 'team',
+      title: "Team",
+      link: "team",
     },
     {
-      title: 'Blog',
-      link: 'blog',
+      title: "Blog",
+      link: "blog",
     },
     {
-      title: 'Contact',
-      link: 'contact',
+      title: "Contact",
+      link: "contact",
     },
   ];
 
   return (
-    <Navbar data-aos='fade-up' data-aos-duration='1000'>
+    <Navbar open={open}>
       <Ul open={open}>
         {routes.map((el, index) => {
           return (
             <li key={index}>
               <NavLink
                 style={({ isActive }) => ({
-                  textDecoration: 'none',
-                  color: isActive ? 'white' : 'rgba(255, 255, 255, 0.6)',
+                  textDecoration: "none",
+                  color: isActive ? "white" : "rgba(255, 255, 255, 0.6)",
                 })}
                 to={el.link}
                 onClick={() => setOpen(!open)}
