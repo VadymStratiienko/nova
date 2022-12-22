@@ -14,6 +14,7 @@ import Branding3 from '../../assets/img/portfolio/branding-3.jpg';
 import Product1 from '../../assets/img/portfolio/product-1.jpg';
 import Product2 from '../../assets/img/portfolio/product-2.jpg';
 import Product3 from '../../assets/img/portfolio/product-3.jpg';
+import ZoomSlider from '../ZoomSlider/view';
 
 const Container = styled.div`
   overflow: hidden;
@@ -22,6 +23,7 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
+  z-index:9999;
 `;
 const Tabs = styled.ul`
   display: flex;
@@ -117,7 +119,6 @@ const InfoLink = styled(Link)`
 `;
 
 interface IProduct {
-  id: number;
   title: string;
   text: string;
   img: string;
@@ -126,84 +127,72 @@ interface IProduct {
 
 const Products: IProduct[] = [
   {
-    id: 1,
     title: 'App 1',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: App1,
     category: 'App',
   },
   {
-    id: 2,
     title: 'App 2',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: App2,
     category: 'App',
   },
   {
-    id: 3,
     title: 'App 3',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: App3,
     category: 'App',
   },
   {
-    id: 4,
     title: 'Books 1',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: Books1,
     category: 'Books',
   },
   {
-    id: 5,
     title: 'Books 2',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: Books2,
     category: 'Books',
   },
   {
-    id: 6,
     title: 'Books 3',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: Books3,
     category: 'Books',
   },
   {
-    id: 7,
     title: 'Branding 1',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: Branding1,
     category: 'Branding',
   },
   {
-    id: 8,
     title: 'Branding 2',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: Branding2,
     category: 'Branding',
   },
   {
-    id: 9,
     title: 'Branding 3',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: Branding3,
     category: 'Branding',
   },
   {
-    id: 10,
     title: 'Product 1',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: Product1,
     category: 'Product',
   },
   {
-    id: 11,
     title: 'Product 2',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: Product2,
     category: 'Product',
   },
   {
-    id: 11,
     title: 'Product 3',
     text: 'Lorem ipsum, dolor sit amet consectetur',
     img: Product3,
@@ -278,14 +267,15 @@ const LandingPortfolio = () => {
           </li>
         </Tabs>
         <ProductsWrapper data-aos='fade-up' data-aos-duration='1000'>
-          {filtered.map((item, id) => {
+          {filtered.map((item, index) => {
             return (
-              <Product key={id} data-aos='zoom-out-down'>
+              <Product key={index} data-aos='zoom-out-down'>
                 <div>
                   <img src={item.img} alt='' />
                   <Info>
                     <h4>{item.title}</h4>
                     <p>{item.text}</p>
+                    <ZoomSlider  filtered={filtered} />
                     <InfoLink to='/portfolio-details'>
                       <BsLink45Deg />
                     </InfoLink>

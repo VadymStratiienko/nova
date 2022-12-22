@@ -11,19 +11,23 @@ import Team from './page/Team/view';
 import Blog from './page/Blog/view';
 import Contact from './page/Contact/view';
 import BlogDetals from './page/BlogDetals/view';
-import { ModalProvider } from 'styled-react-modal';
+import { BaseModalBackground, ModalProvider } from 'styled-react-modal';
 import { Route, Routes } from 'react-router-dom';
-
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+import styled from 'styled-components';
 
+const SpecialModalBackground = styled(BaseModalBackground)`
+  background-color: #0c0b0b;
+  z-index: 999999999;
+`
 function App() {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
   return (
-    <ModalProvider>
+    <ModalProvider backgroundComponent={SpecialModalBackground}>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />

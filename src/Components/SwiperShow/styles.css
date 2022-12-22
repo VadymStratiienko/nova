@@ -17,7 +17,7 @@
     max-width: 696px;
   }
 }
-@media (max-width: 765px) {
+@media (max-width: 768px) {
   .swiper {
     max-width: 516px;
   }
