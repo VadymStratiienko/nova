@@ -7,6 +7,7 @@ import styled from "styled-components";
 import Modal from "styled-react-modal";
 import FocusLock from "react-focus-lock";
 import { IoMdClose } from "react-icons/io";
+import { BsZoomIn } from "react-icons/bs";
 
 const StyledModal = Modal.styled`
   position: relative;
@@ -18,7 +19,14 @@ const StyledModal = Modal.styled`
   min-width: 0;
   `;
 
-const ButtonZoom = styled.button``;
+const Zoom = styled(BsZoomIn)`
+  color: rgba(27, 47, 69, 0.7);
+  padding-right: 5px;
+  cursor: pointer;
+  :hover {
+    color: var(--color-primary);
+  }
+`;
 const Container = styled.div`
   .swiper {
     margin: 0 auto;
@@ -99,13 +107,12 @@ interface IProduct {
 }
 interface IFiltered {
   filtered: IProduct[];
+  filterCategories: (category: string) => void;
 }
 
-const ZoomSlider = ({ filtered }: IFiltered) => {
+const ZoomSlider = ({ filtered, filterCategories }: IFiltered) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const [clickedImg, setClickedImg] = useState("");
-  console.log(clickedImg);
+  const [clickedImg, setClickedImg] = useState<null | string>(null);
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
@@ -114,7 +121,7 @@ const ZoomSlider = ({ filtered }: IFiltered) => {
 
   return (
     <>
-      <ButtonZoom onClick={() => toggleModal()}> IMG</ButtonZoom>
+      <Zoom onClick={() => toggleModal()} />
       {clickedImg && (
         <StyledModal
           isOpen={isOpen}

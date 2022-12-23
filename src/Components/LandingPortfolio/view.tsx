@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { BsLink45Deg } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import App1 from '../../assets/img/portfolio/app-1.jpg';
-import App2 from '../../assets/img/portfolio/app-2.jpg';
-import App3 from '../../assets/img/portfolio/app-3.jpg';
-import Books1 from '../../assets/img/portfolio/books-1.jpg';
-import Books2 from '../../assets/img/portfolio/books-2.jpg';
-import Books3 from '../../assets/img/portfolio/books-3.jpg';
-import Branding1 from '../../assets/img/portfolio/branding-1.jpg';
-import Branding2 from '../../assets/img/portfolio/branding-2.jpg';
-import Branding3 from '../../assets/img/portfolio/branding-3.jpg';
-import Product1 from '../../assets/img/portfolio/product-1.jpg';
-import Product2 from '../../assets/img/portfolio/product-2.jpg';
-import Product3 from '../../assets/img/portfolio/product-3.jpg';
-import ZoomSlider from '../ZoomSlider/view';
+import { useState } from "react";
+import { BsLink45Deg } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import App1 from "../../assets/img/portfolio/app-1.jpg";
+import App2 from "../../assets/img/portfolio/app-2.jpg";
+import App3 from "../../assets/img/portfolio/app-3.jpg";
+import Books1 from "../../assets/img/portfolio/books-1.jpg";
+import Books2 from "../../assets/img/portfolio/books-2.jpg";
+import Books3 from "../../assets/img/portfolio/books-3.jpg";
+import Branding1 from "../../assets/img/portfolio/branding-1.jpg";
+import Branding2 from "../../assets/img/portfolio/branding-2.jpg";
+import Branding3 from "../../assets/img/portfolio/branding-3.jpg";
+import Product1 from "../../assets/img/portfolio/product-1.jpg";
+import Product2 from "../../assets/img/portfolio/product-2.jpg";
+import Product3 from "../../assets/img/portfolio/product-3.jpg";
+import ZoomSlider from "../ZoomSlider/view";
 
 const Container = styled.div`
   overflow: hidden;
@@ -23,7 +23,7 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
-  z-index:9999;
+  z-index: 9999;
 `;
 const Tabs = styled.ul`
   display: flex;
@@ -102,19 +102,23 @@ const Info = styled.div`
   }
 `;
 
-const InfoLink = styled(Link)`
+const BlockIcons = styled.div`
   right: 14px;
   font-size: 28px;
   position: absolute;
-  right: 20px;
+  right: 10px;
   font-size: 24px;
   top: calc(50% - 14px);
-  color: rgba(27, 47, 69, 0.7);
+
   transition: 0.3s;
   line-height: 0;
 
-  :hover {
-    color: var(--color-primary);
+  a {
+    text-decoration: none;
+    color: rgba(27, 47, 69, 0.7);
+    :hover {
+      color: var(--color-primary);
+    }
   }
 `;
 
@@ -127,76 +131,76 @@ interface IProduct {
 
 const Products: IProduct[] = [
   {
-    title: 'App 1',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "App 1",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: App1,
-    category: 'App',
+    category: "App",
   },
   {
-    title: 'App 2',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "App 2",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: App2,
-    category: 'App',
+    category: "App",
   },
   {
-    title: 'App 3',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "App 3",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: App3,
-    category: 'App',
+    category: "App",
   },
   {
-    title: 'Books 1',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "Books 1",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: Books1,
-    category: 'Books',
+    category: "Books",
   },
   {
-    title: 'Books 2',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "Books 2",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: Books2,
-    category: 'Books',
+    category: "Books",
   },
   {
-    title: 'Books 3',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "Books 3",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: Books3,
-    category: 'Books',
+    category: "Books",
   },
   {
-    title: 'Branding 1',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "Branding 1",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: Branding1,
-    category: 'Branding',
+    category: "Branding",
   },
   {
-    title: 'Branding 2',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "Branding 2",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: Branding2,
-    category: 'Branding',
+    category: "Branding",
   },
   {
-    title: 'Branding 3',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "Branding 3",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: Branding3,
-    category: 'Branding',
+    category: "Branding",
   },
   {
-    title: 'Product 1',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "Product 1",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: Product1,
-    category: 'Product',
+    category: "Product",
   },
   {
-    title: 'Product 2',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "Product 2",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: Product2,
-    category: 'Product',
+    category: "Product",
   },
   {
-    title: 'Product 3',
-    text: 'Lorem ipsum, dolor sit amet consectetur',
+    title: "Product 3",
+    text: "Lorem ipsum, dolor sit amet consectetur",
     img: Product3,
-    category: 'Product',
+    category: "Product",
   },
 ];
 
@@ -209,23 +213,25 @@ const LandingPortfolio = () => {
   };
 
   function filterCategories(category: string) {
-    if (category === 'All') {
+    if (category === "All") {
       setFiltered(Products);
       toggleTab(1);
-    } else if (category === 'App') {
-      let App = [...Products].filter((item) => item.category === 'App');
+    } else if (category === "App") {
+      let App = [...Products].filter((item) => item.category === "App");
       setFiltered(App);
       toggleTab(2);
-    } else if (category === 'Books') {
-      let Books = [...Products].filter((item) => item.category === 'Books');
+    } else if (category === "Books") {
+      let Books = [...Products].filter((item) => item.category === "Books");
       setFiltered(Books);
       toggleTab(3);
-    } else if (category === 'Branding') {
-      let Branding = [...Products].filter((item) => item.category === 'Branding');
+    } else if (category === "Branding") {
+      let Branding = [...Products].filter(
+        (item) => item.category === "Branding"
+      );
       setFiltered(Branding);
       toggleTab(4);
-    } else if (category === 'Product') {
-      let Product = [...Products].filter((item) => item.category === 'Product');
+    } else if (category === "Product") {
+      let Product = [...Products].filter((item) => item.category === "Product");
       setFiltered(Product);
       toggleTab(5);
     }
@@ -233,52 +239,57 @@ const LandingPortfolio = () => {
 
   return (
     <section>
-      <Container data-aos='fade-up' data-aos-duration='1000'>
+      <Container data-aos="fade-up" data-aos-duration="1000">
         <Tabs>
           <li
-            className={toggleState === 1 ? ' active-tabs' : ''}
-            onClick={() => filterCategories('All')}
+            className={toggleState === 1 ? " active-tabs" : ""}
+            onClick={() => filterCategories("All")}
           >
             All
           </li>
           <li
-            className={toggleState === 2 ? 'active-tabs' : ''}
-            onClick={() => filterCategories('App')}
+            className={toggleState === 2 ? "active-tabs" : ""}
+            onClick={() => filterCategories("App")}
           >
             App
           </li>
           <li
-            className={toggleState === 3 ? 'active-tabs' : ''}
-            onClick={() => filterCategories('Books')}
+            className={toggleState === 3 ? "active-tabs" : ""}
+            onClick={() => filterCategories("Books")}
           >
             Books
           </li>
           <li
-            className={toggleState === 4 ? 'active-tabs' : ''}
-            onClick={() => filterCategories('Branding')}
+            className={toggleState === 4 ? "active-tabs" : ""}
+            onClick={() => filterCategories("Branding")}
           >
             Branding
           </li>
           <li
-            className={toggleState === 5 ? 'active-tabs' : ''}
-            onClick={() => filterCategories('Product')}
+            className={toggleState === 5 ? "active-tabs" : ""}
+            onClick={() => filterCategories("Product")}
           >
             Product
           </li>
         </Tabs>
-        <ProductsWrapper data-aos='fade-up' data-aos-duration='1000'>
+        <ProductsWrapper data-aos="fade-up" data-aos-duration="1000">
           {filtered.map((item, index) => {
             return (
-              <Product key={index} data-aos='zoom-out-down'>
+              <Product key={index} data-aos="zoom-out-down">
                 <div>
-                  <img src={item.img} alt='' />
+                  <img src={item.img} alt="" />
                   <Info>
                     <h4>{item.title}</h4>
                     <p>{item.text}</p>
-                    <ZoomSlider  filtered={filtered} />
-                    <InfoLink to='/portfolio-details'>
-                      <BsLink45Deg />
-                    </InfoLink>
+                    <BlockIcons>
+                      <ZoomSlider
+                        filtered={filtered}
+                        filterCategories={filterCategories}
+                      />
+                      <Link to="/portfolio-details">
+                        <BsLink45Deg />
+                      </Link>
+                    </BlockIcons>
                   </Info>
                 </div>
               </Product>
