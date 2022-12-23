@@ -107,10 +107,10 @@ interface IProduct {
 }
 interface IFiltered {
   filtered: IProduct[];
-  filterCategories: (category: string) => void;
+
 }
 
-const ZoomSlider = ({ filtered, filterCategories }: IFiltered) => {
+const ZoomSlider = ({ filtered,  }: IFiltered) => {
   const [isOpen, setIsOpen] = useState(false);
   const [clickedImg, setClickedImg] = useState<null | string>(null);
 

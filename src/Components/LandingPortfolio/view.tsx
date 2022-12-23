@@ -284,7 +284,6 @@ const LandingPortfolio = () => {
                     <BlockIcons>
                       <ZoomSlider
                         filtered={filtered}
-                        filterCategories={filterCategories}
                       />
                       <Link to="/portfolio-details">
                         <BsLink45Deg />
